@@ -1,10 +1,8 @@
 inhibit_all_warnings!
 
-#source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 
 target 'Example' do
-    pod 'CLAspects', :path => '/Users/lion/AOPTestProject/CLAspects'
+    pod 'CLAspects', :path => '/Users/lion/CLAspects'
 end
-
-

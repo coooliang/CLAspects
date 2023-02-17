@@ -1,5 +1,5 @@
 //
-//  CLAspects.h
+//  LogTest.h
 //  AOPTestProject
 //
 //  Created by chenliang on 02/11/2018.
@@ -10,15 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CLAspects : NSObject
+@interface LogTest : NSObject
 
-+ (CLAspects *)sharedInstance;
-
-- (void)aop;
-
-- (void)setDebug:(BOOL)d;
-
-@property (nonatomic,strong)NSString *fileName;
++(void)md:(NSString *)key props:(NSDictionary *)props;
 
 @end
 

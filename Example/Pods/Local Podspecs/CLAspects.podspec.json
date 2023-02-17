@@ -1,0 +1,28 @@
+{
+  "name": "CLAspects",
+  "version": "0.1.0",
+  "summary": "A short description of CLAspects.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/coooliang/CLAspects",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chenliang": "lion"
+  },
+  "source": {
+    "git": "https://github.com/CocoaPods/Specs.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "static_framework": true,
+  "source_files": "CLAspects/Classes/**/*",
+  "dependencies": {
+    "Aspects": [
+
+    ]
+  }
+}

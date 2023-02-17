@@ -1,0 +1,23 @@
+PODS:
+  - Aspects (1.4.1)
+  - CLAspects (0.1.0):
+    - Aspects
+
+DEPENDENCIES:
+  - CLAspects (from `/Users/lion/CLAspects`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Aspects
+
+EXTERNAL SOURCES:
+  CLAspects:
+    :path: "/Users/lion/CLAspects"
+
+SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  CLAspects: 588b9294b54666446cf348f1ad3a9622ad66a1d8
+
+PODFILE CHECKSUM: 9cf1e05a4b9b13b1dbf403d0f523ceca4db3b218
+
+COCOAPODS: 1.11.3

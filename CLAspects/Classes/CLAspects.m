@@ -7,37 +7,39 @@
 //
 
 #import "CLAspects.h"
-#import <Aspects.h>
-#import "LogTest.h"
-#import "CLFormatJson.h"
+#import "Aspects.h"
 
-static BOOL debug;
-@implementation CLAspects
+@implementation CLAspects {
+    BOOL _debug;
+}
 
 #pragma mark - public methods
-+(void)aop{
+- (void)aop {
     [self loadXml];
 }
 
-+(void)setDebug:(BOOL)d{
-    debug = d;
+- (void)setDebug:(BOOL)d {
+    _debug = d;
 }
 
 #pragma mark -
-+(void)loadXml{
+- (void)loadXml {
     //load xml
-    NSData *data = [self loadConfigWithFileName:@"md.json"];
+    if(self.fileName == nil || [@"" isEqualToString:self.fileName]){
+        self.fileName = @"md.json";
+    }
+    NSData *data = [self loadConfigWithFileName:self.fileName];
     if(data){
         NSArray *points = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         [self aspect:points];
-        if(debug){
-            [[CLFormatJson new]printToConsole:points];
-            [[CLFormatJson new]printToHtml:points];
+        if(_debug){
+            //            [[CLFormatJson new]printToConsole:points];
+            //            [[CLFormatJson new]printToHtml:points];
         }
     }
 }
 
-+(void)aspect:(NSArray *)points{
+- (void)aspect:(NSArray *)points {
     if(points && [points isKindOfClass:[NSArray class]] && points.count > 0){
         for (NSDictionary *point in points) {
             NSDictionary *md = [point objectForKey:@"md"];
@@ -46,14 +48,14 @@ static BOOL debug;
                 NSString *method = [md objectForKey:@"method"];
                 [self after:className method:method callback:^(id<AspectInfo> aspectInfo) {
                     NSDictionary *props = [self transferProps:point[@"eventLabels"] target:aspectInfo.instance];
-                    [LogTest md:point[@"eventId"] props:props];
+                    //                    [LogTest md:point[@"eventId"] props:props];
                 }];
             }
         }
     }
 }
 
-+(NSDictionary *)transferProps:(NSDictionary *)props target:(id)target{
+- (NSDictionary *)transferProps:(NSDictionary *)props target:(id)target {
     if(props == nil)return @{};
     NSMutableDictionary *result = [NSMutableDictionary dictionaryWithCapacity:props.count];
     for (NSString *k in props.allKeys) {
@@ -77,7 +79,7 @@ static BOOL debug;
 }
 
 #pragma mark - loadConfigWithFileName
-+(NSData *)loadConfigWithFileName:(NSString *)fileName{
+- (NSData *)loadConfigWithFileName:(NSString *)fileName {
     NSString *path = [[NSBundle mainBundle]pathForResource:fileName ofType:nil];
     NSFileHandle *file = [NSFileHandle fileHandleForReadingAtPath:path];
     NSData *data = [file readDataToEndOfFile];
@@ -86,15 +88,15 @@ static BOOL debug;
 }
 
 #pragma mark - private aop methods
-+(void)after:(NSString *)className method:(NSString *)methodName callback:(void(^)(id<AspectInfo> aspectInfo))callBack{
+- (void)after:(NSString *)className method:(NSString *)methodName callback:(void(^)(id<AspectInfo> aspectInfo))callBack {
     [self class:className method:methodName options:AspectPositionAfter callback:callBack];
 }
 
-+(void)before:(NSString *)className method:(NSString *)methodName callback:(void(^)(id<AspectInfo> aspectInfo))callBack{
+- (void)before:(NSString *)className method:(NSString *)methodName callback:(void(^)(id<AspectInfo> aspectInfo))callBack {
     [self class:className method:methodName options:AspectPositionBefore callback:callBack];
 }
 
-+(void)class:(NSString *)className method:(NSString *)methodName options:(AspectOptions)options callback:(void(^)(id<AspectInfo>))callBack{
+- (void)class:(NSString *)className method:(NSString *)methodName options:(AspectOptions)options callback:(void(^)(id<AspectInfo>))callBack {
     Class class = NSClassFromString(className);
     SEL method = NSSelectorFromString(methodName);
     if (class && method) {
