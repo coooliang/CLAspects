@@ -17,9 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
-    [CLAspects setDebug:YES];
-    [CLAspects aop];
+    [[CLAspects sharedInstance]setDebug:YES];
+    [[CLAspects sharedInstance]aop];
     
     ViewController *viewController = [[ViewController alloc]init];
     UINavigationController *root = [[UINavigationController alloc]initWithRootViewController:viewController];

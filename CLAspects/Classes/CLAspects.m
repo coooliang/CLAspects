@@ -13,13 +13,46 @@
     BOOL _debug;
 }
 
+//单例
+static CLAspects *instance = nil;
++ (id)sharedInstance {
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        instance = [[self alloc] init];
+    });
+    return instance;
+}
 #pragma mark - public methods
 - (void)aop {
     [self loadXml];
 }
 
+
+#define __cl_aspects_example_md_json__(x) #x
+    static NSString *exampleMDJson = @__cl_aspects_example_md_json__(
+         ([
+           {
+               "eventName": "点击立即注册",
+               "eventId": "Register_Begin_Button",
+               "eventLabels": {
+                   "Channel": "$channel",
+                   "Equipment": "$Equipment",
+                   "VersionNumber": "4.5.3"
+               },
+               "md": {
+                   "class": "TestViewController",
+                   "method": "viewDidLoad"
+               },
+               "desc": "渠道(Channel):微站、app标准版、app关怀版、非营销人员老带新、营销人员老带新、web端、柜面扫码;设备(Equipment):安卓(具体系统型号)、ios苹果(具体系统型号)、pc(具体系统型号)、平板(具体系统型号);版本号(VersionNumber):当前事件对应的版本号"
+           }
+       ])
+    );
+#undef __cl_aspects_example_md_json__
 - (void)setDebug:(BOOL)d {
     _debug = d;
+    if(d){
+        NSLog(@"md.json For Example : \n %@",exampleMDJson);
+    }
 }
 
 #pragma mark -
@@ -76,6 +109,18 @@
         }
     }
     return result;
+}
+
+- (NSString *)stringByReplaceUnicode:(NSString *)printString {
+    NSMutableString *convertedString = [printString mutableCopy];
+    [convertedString replaceOccurrencesOfString:@"\\U"
+                                     withString:@"\\u"
+                                        options:0
+                                          range:NSMakeRange(0, convertedString.length)];
+    
+    CFStringRef transform = CFSTR("Any-Hex/Java");
+    CFStringTransform((__bridge CFMutableStringRef)convertedString, NULL, transform, YES);
+    return convertedString;
 }
 
 #pragma mark - loadConfigWithFileName
