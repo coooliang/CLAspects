@@ -16,11 +16,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     CLAConfigOptions *options = [[CLAConfigOptions alloc]init];
-    options.enableLog = YES;
+//    options.enableLog = YES;
     [[CLAspects sharedInstance]aop:options block:^(NSDictionary *result) {
         NSLog(@"result = %@",result);
-    } configBlock:^(NSDictionary *result) {
-        NSLog(@"config = %@",[self stringByReplaceUnicode:result[@"html"]]);
+    } configBlock:^(NSString *html) {
+        NSLog(@"config = %@",html);
     }];
     
     ViewController *viewController = [[ViewController alloc]init];

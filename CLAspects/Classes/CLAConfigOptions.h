@@ -8,6 +8,8 @@
 
 @interface CLAConfigOptions : NSObject
 
+- (instancetype)initWithFileName:(NSString *)fileName;
+
 @property (nonatomic,strong)NSString *fileName;
 @property (nonatomic,assign)BOOL enableLog;
 

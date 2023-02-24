@@ -9,7 +9,7 @@
 #import "CLAspects.h"
 #import "Aspects.h"
 
-typedef void (^ConfigBlock)(NSDictionary *result);
+typedef void (^ConfigBlock)(NSString *html);
 typedef void (^Callback)(NSDictionary *result);
 @implementation CLAspects{
     CLAConfigOptions *_configOptions;
@@ -29,7 +29,7 @@ static CLAspects *instance = nil;
 }
 
 #pragma mark - public methods
-- (void)aop:(CLAConfigOptions *)configOptions block:(void(^)(NSDictionary *result))block configBlock:(void(^)(NSDictionary *result))configBlock {
+- (void)aop:(CLAConfigOptions *)configOptions block:(void(^)(NSDictionary *result))block configBlock:(void(^)(NSString *html))configBlock {
     if(configOptions == nil){
         configOptions = [[CLAConfigOptions alloc]init];
     }
@@ -138,7 +138,7 @@ static CLAspects *instance = nil;
         [string appendString:@"</body>"];
         [string appendString:@"</html>"];
         
-        _configBlock(@{@"html":string});
+        _configBlock(string);
     }
 }
 

@@ -8,4 +8,12 @@
 
 @implementation CLAConfigOptions
 
+- (instancetype)initWithFileName:(NSString *)fileName {
+    self = [super init];
+    if (self) {
+        _fileName = fileName;
+    }
+    return self;
+}
+
 @end
