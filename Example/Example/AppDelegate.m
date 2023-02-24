@@ -15,10 +15,12 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    CLAConfigOptions *configOptions = [[CLAConfigOptions alloc]init];
-    configOptions.enableLog = YES;
-    [[CLAspects sharedInstance]aop:configOptions block:^(NSDictionary *result) {
-        NSLog(@"result = %@",[self stringByReplaceUnicode:result[@"html"]]);
+    CLAConfigOptions *options = [[CLAConfigOptions alloc]init];
+    options.enableLog = YES;
+    [[CLAspects sharedInstance]aop:options block:^(NSDictionary *result) {
+        NSLog(@"result = %@",result);
+    } configBlock:^(NSDictionary *result) {
+        NSLog(@"config = %@",[self stringByReplaceUnicode:result[@"html"]]);
     }];
     
     ViewController *viewController = [[ViewController alloc]init];

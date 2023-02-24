@@ -9,10 +9,13 @@
 #import "CLAspects.h"
 #import "Aspects.h"
 
-typedef void (^DebugBlock)(NSDictionary *result);
+typedef void (^ConfigBlock)(NSDictionary *result);
+typedef void (^Callback)(NSDictionary *result);
 @implementation CLAspects{
-    DebugBlock _debugBlock;
     CLAConfigOptions *_configOptions;
+    
+    ConfigBlock _configBlock;
+    Callback _block;
 }
 
 //单例
@@ -26,15 +29,16 @@ static CLAspects *instance = nil;
 }
 
 #pragma mark - public methods
-- (void)aop:(CLAConfigOptions *)configOptions block:(void(^)(NSDictionary *result))block {
-    _configOptions = configOptions;
-    _debugBlock = block;
+- (void)aop:(CLAConfigOptions *)configOptions block:(void(^)(NSDictionary *result))block configBlock:(void(^)(NSDictionary *result))configBlock {
     if(configOptions == nil){
         configOptions = [[CLAConfigOptions alloc]init];
     }
     if(configOptions.fileName == nil || [@"" isEqualToString:configOptions.fileName]){
         configOptions.fileName = @"md.json";
     }
+    _configOptions = configOptions;
+    _configBlock = configBlock;
+    _block = block;
     NSData *data = [self loadConfigWithFileName:configOptions.fileName];
     if(data){
         NSArray *points = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
@@ -44,9 +48,6 @@ static CLAspects *instance = nil;
         }
         [self printToHtml:points];
     }
-}
-- (void)aop {
-    [self aop:nil block:nil];
 }
 
 #pragma mark - 
@@ -106,16 +107,20 @@ static CLAspects *instance = nil;
 }
 
 -(void)printToHtml:(NSArray *)points{
-    if(_debugBlock && points){
+    if(_configBlock && points){
         NSArray *array = [self neatenArray:points];
         NSMutableString *string = [NSMutableString stringWithCapacity:0];
+        [string appendString:@"<!DOCTYPE html>"];
         [string appendString:@"<html>"];
         [string appendString:@"<head>"];
-        [string appendString:@"<style type=\"text/css\">.xwtable { width: 100%; border-collapse: collapse; border: 1px solid #ccc; } .xwtable thead td { font-size: 12px; color: #333333; text-align: center; background: url(table_top.jpg) repeat-x top center; border: 1px solid #ccc; font-weight: bold; } .xwtable tbody tr { background: #fff; font-size: 12px; color: #666666; } .xwtable tbody tr.alt-row { background: #f2f7fc; } .xwtable td { line-height: 20px; text-align: left; padding: 4px 10px 3px 10px; height: 18px; border: 1px solid #ccc; }</style>"];
+        [string appendString:@"<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0\"/>"];
+        [string appendString:@"<style type=\"text/css\">.xwtable { width: 100%; border-collapse: collapse; border: 1px solid #ccc; } .xwtable thead td { font-size: 12px; color: #333333; text-align: center; border: 1px solid #ccc; font-weight: bold; } .xwtable tbody tr { background: #fff; font-size: 12px; color: #666666; } .xwtable tbody tr.alt-row { background: #f2f7fc; } .xwtable td { line-height: 20px; text-align: left; padding: 4px 10px 3px 10px; height: 18px; border: 1px solid #ccc; }</style>"];
         [string appendString:@"</head>"];
         
         [string appendString:@"<body>"];
-        [string appendString:@"<center><h1>埋点表格</h1></center>"];
+        
+        [string appendString:@"<div style=\"text-align:center\"><h1>埋点表格</h1></div>"];
+        
         [string appendString:@"<table class=\"xwtable\">"];
         
         //eventName,eventId,eventLabels,class,method
@@ -132,7 +137,8 @@ static CLAspects *instance = nil;
         [string appendString:@"</table>"];
         [string appendString:@"</body>"];
         [string appendString:@"</html>"];
-        _debugBlock(@{@"html":string});
+        
+        _configBlock(@{@"html":string});
     }
 }
 
@@ -146,7 +152,7 @@ static CLAspects *instance = nil;
                 NSString *method = [md objectForKey:@"method"];
                 [self after:className method:method callback:^(id<AspectInfo> aspectInfo) {
                     NSDictionary *props = [self transferProps:point[@"eventLabels"] target:aspectInfo.instance];
-                    //                    [LogTest md:point[@"eventId"] props:props];
+                    if(_block)_block(@{@"props":props});
                 }];
             }
         }
