@@ -1,0 +1,16 @@
+[
+    {
+        "eventName": "点击立即注册",
+        "eventId": "Register_Begin_Button",
+        "eventLabels": {
+            "Channel": "$channel",
+            "Equipment": "$Equipment",
+            "VersionNumber": "4.5.3"
+        },
+        "md": {
+            "class": "TestViewController",
+            "method": "viewDidLoad"
+        },
+        "desc": "渠道(Channel)"
+    }
+]

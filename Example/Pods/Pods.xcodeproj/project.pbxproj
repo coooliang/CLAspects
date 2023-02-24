@@ -7,68 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1522CD935DCA2963232BDEB62E92A973 /* CLAConfigOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3EF77756F29765A044E52863399BB3 /* CLAConfigOptions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1883F4385169E8220A23A3B095BE1884 /* CLAConfigOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F16B7B9005A2D4727567DA024DB37E7 /* CLAConfigOptions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		22F0A4C90C10F9DB15F6F94A33614777 /* Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = 325E1DE4DCB4C534D06ABCD63E2F8B15 /* Aspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4B6A566087E1058A1B568AB577473A17 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BFEF1DDF3D2D328528F7A565F5177D /* Pods-Example-dummy.m */; };
+		4E12BC1E33C94AD0FEB28EFC78FAC189 /* CLAspects.h in Headers */ = {isa = PBXBuildFile; fileRef = FD4B31928228BB391B97CBC13FDE59C4 /* CLAspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7CF1484AA5CC1843AE45C4CA0C0D1142 /* CLAspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 255787E785DE310D89314A3888B13F8E /* CLAspects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7F63909F08B4B6E09A847845F8696F29 /* CLAspects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3210140DF521EB785C7E7F488FD97D /* CLAspects-dummy.m */; };
 		828AD7256969091B99E519892452B59F /* Aspects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 294023A17A64B93731AC48F5311B08E1 /* Aspects-dummy.m */; };
-		A9BAEFC284B1CD0953CF303F551E5097 /* CLAspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 4270FA2058DC4A759931755D0894B6D2 /* CLAspects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D2E34223269A0916568D7EA8FA0D52B7 /* CLAspects.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6256E6B1959A14840777F3AD40BB71 /* CLAspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EF8A78801B03811A3553B31E21154729 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E78E83656B249A2C505F8BD77F4D6 /* Aspects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FD3F7A1743CD7BCB15344C71FE16EB79 /* CLAspects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE594928F214624D9F50E3486EF34145 /* CLAspects-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2EC712DA200BCC22B098911BF39C3199 /* PBXContainerItemProxy */ = {
+		BD5F6842E2CFF0CE6E7BBE431AC4E3BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C6539905C4D50932B36244650B93C79B;
 			remoteInfo = Aspects;
 		};
-		66863EE227A475DDFE8B51D67BEF3ED9 /* PBXContainerItemProxy */ = {
+		E27A34C632CB509C56B0EE4423ACE3DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6539905C4D50932B36244650B93C79B;
+			remoteInfo = Aspects;
+		};
+		FF675F6F295D5DB4F595189CFCCA76ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A59CD135374A833F453EE431100C569A;
 			remoteInfo = CLAspects;
 		};
-		9E157ADCF2EBFC139477599B899AB0FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6539905C4D50932B36244650B93C79B;
-			remoteInfo = Aspects;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B66DA72224BEFB1BE416FE6C16954D7 /* CLAspects */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = CLAspects; path = libCLAspects.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-Example"; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23A3C2C1401DF06B6374C2FEB142F84A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		255787E785DE310D89314A3888B13F8E /* CLAspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLAspects.m; path = CLAspects/Classes/CLAspects.m; sourceTree = "<group>"; };
 		294023A17A64B93731AC48F5311B08E1 /* Aspects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Aspects-dummy.m"; sourceTree = "<group>"; };
-		2CC1E2F8F95760297CA1C82BEFF0BC16 /* CLAspects.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CLAspects.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2F16B7B9005A2D4727567DA024DB37E7 /* CLAConfigOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLAConfigOptions.h; path = CLAspects/Classes/CLAConfigOptions.h; sourceTree = "<group>"; };
 		325E1DE4DCB4C534D06ABCD63E2F8B15 /* Aspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
-		4270FA2058DC4A759931755D0894B6D2 /* CLAspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLAspects.m; path = CLAspects/Classes/CLAspects.m; sourceTree = "<group>"; };
+		357D2DB6E0666AB0C7275BFF8A9C9B4B /* CLAspects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLAspects.debug.xcconfig; sourceTree = "<group>"; };
 		4D952ED0F761C0BA1CCED14714F20D7D /* Aspects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Aspects-prefix.pch"; sourceTree = "<group>"; };
 		5614FC705A17F97DE4B5E67782B3E449 /* Aspects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Aspects.release.xcconfig; sourceTree = "<group>"; };
+		5D3EF77756F29765A044E52863399BB3 /* CLAConfigOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLAConfigOptions.m; path = CLAspects/Classes/CLAConfigOptions.m; sourceTree = "<group>"; };
 		618D517A4DCA886A6D4D0BEAB51D0813 /* Aspects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Aspects.debug.xcconfig; sourceTree = "<group>"; };
-		7FB5EC386DEEED90E59F9E7545FAB020 /* CLAspects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLAspects.debug.xcconfig; sourceTree = "<group>"; };
+		6311057E366A5B76F278DBB4E9C96E88 /* CLAspects.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CLAspects.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		873CDB2CE2AB3D55E7F7846B54D0067E /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8F953B8D3D131938A2A00B571BEB47CF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		9808BF74538141204E4EB5B49809FE77 /* Aspects */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = Aspects; path = libAspects.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		995512BD8A1204FF064C89218D3D9059 /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		9A06B2CBC7F57E9BE08460BE730B397B /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A87323D09777044A5BCB323712546A1D /* CLAspects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLAspects.release.xcconfig; sourceTree = "<group>"; };
 		B30E78E83656B249A2C505F8BD77F4D6 /* Aspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
-		BB6256E6B1959A14840777F3AD40BB71 /* CLAspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLAspects.h; path = CLAspects/Classes/CLAspects.h; sourceTree = "<group>"; };
+		BB3210140DF521EB785C7E7F488FD97D /* CLAspects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLAspects-dummy.m"; sourceTree = "<group>"; };
 		CEB5CE60F2648C5816E0D295E71A57FF /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D4D4E055384B0485AD5DD9095DDDACD9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		D5BFEF1DDF3D2D328528F7A565F5177D /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
-		D896F8BECCA4A5D5FFF62E20E8EDF898 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		DB32DF2C4975E98BB21227BCC10F8D88 /* CLAspects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLAspects.release.xcconfig; sourceTree = "<group>"; };
-		DE594928F214624D9F50E3486EF34145 /* CLAspects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLAspects-dummy.m"; sourceTree = "<group>"; };
-		FBCF5F073C6B6B89C8A8F778087CF2C6 /* CLAspects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLAspects-prefix.pch"; sourceTree = "<group>"; };
+		DF2A683DA724D7C1198DB189A9AD204C /* CLAspects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLAspects-prefix.pch"; sourceTree = "<group>"; };
+		FD4B31928228BB391B97CBC13FDE59C4 /* CLAspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLAspects.h; path = CLAspects/Classes/CLAspects.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3EF4A2FE74FA5D066FC81B7CA021F1CE /* Frameworks */ = {
+		12620CF954D12C7573D293DC6782490C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -104,6 +108,14 @@
 			path = "../Target Support Files/Aspects";
 			sourceTree = "<group>";
 		};
+		162741B1A489130DA83BDC6301500732 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCD76ABC7D8C8A9D94431FA80F220F39 /* CLAspects */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		18ECB66E49FFC6B8E670A422FAFFC9C1 /* Aspects */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +125,18 @@
 			);
 			name = Aspects;
 			path = Aspects;
+			sourceTree = "<group>";
+		};
+		5CA4C252654F02A65F0F260A01829D38 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB3210140DF521EB785C7E7F488FD97D /* CLAspects-dummy.m */,
+				DF2A683DA724D7C1198DB189A9AD204C /* CLAspects-prefix.pch */,
+				357D2DB6E0666AB0C7275BFF8A9C9B4B /* CLAspects.debug.xcconfig */,
+				A87323D09777044A5BCB323712546A1D /* CLAspects.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CLAspects";
 			sourceTree = "<group>";
 		};
 		5FEFBFFE4CBFCEE496A3A740F57D04D5 /* Pods-Example */ = {
@@ -128,24 +152,12 @@
 			path = "Target Support Files/Pods-Example";
 			sourceTree = "<group>";
 		};
-		788C86604FBA9A05B8B10B207D553969 /* CLAspects */ = {
+		763A66ABE6174644B98D51AFB43DF547 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				BB6256E6B1959A14840777F3AD40BB71 /* CLAspects.h */,
-				4270FA2058DC4A759931755D0894B6D2 /* CLAspects.m */,
-				954EEB9F292C5D9E671C74B3D0992FA7 /* Pod */,
-				CB03AFEF835D54B5EC3228FA56A9C80F /* Support Files */,
-			);
-			name = CLAspects;
-			path = /Users/lion/CLAspects;
-			sourceTree = "<absolute>";
-		};
-		954EEB9F292C5D9E671C74B3D0992FA7 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				2CC1E2F8F95760297CA1C82BEFF0BC16 /* CLAspects.podspec */,
-				D896F8BECCA4A5D5FFF62E20E8EDF898 /* LICENSE */,
-				D4D4E055384B0485AD5DD9095DDDACD9 /* README.md */,
+				6311057E366A5B76F278DBB4E9C96E88 /* CLAspects.podspec */,
+				23A3C2C1401DF06B6374C2FEB142F84A /* LICENSE */,
+				8F953B8D3D131938A2A00B571BEB47CF /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -160,31 +172,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B696B8343026A93A25CB4BE24D632FB1 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				788C86604FBA9A05B8B10B207D553969 /* CLAspects */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		CB03AFEF835D54B5EC3228FA56A9C80F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DE594928F214624D9F50E3486EF34145 /* CLAspects-dummy.m */,
-				FBCF5F073C6B6B89C8A8F778087CF2C6 /* CLAspects-prefix.pch */,
-				7FB5EC386DEEED90E59F9E7545FAB020 /* CLAspects.debug.xcconfig */,
-				DB32DF2C4975E98BB21227BCC10F8D88 /* CLAspects.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CLAspects";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				B696B8343026A93A25CB4BE24D632FB1 /* Development Pods */,
+				162741B1A489130DA83BDC6301500732 /* Development Pods */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				D4235D072F0DC7818942872CBFF5FCF4 /* Pods */,
 				A37045BEC3121E099690E83DFCBC9E3B /* Products */,
@@ -215,9 +207,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FCD76ABC7D8C8A9D94431FA80F220F39 /* CLAspects */ = {
+			isa = PBXGroup;
+			children = (
+				2F16B7B9005A2D4727567DA024DB37E7 /* CLAConfigOptions.h */,
+				5D3EF77756F29765A044E52863399BB3 /* CLAConfigOptions.m */,
+				FD4B31928228BB391B97CBC13FDE59C4 /* CLAspects.h */,
+				255787E785DE310D89314A3888B13F8E /* CLAspects.m */,
+				763A66ABE6174644B98D51AFB43DF547 /* Pod */,
+				5CA4C252654F02A65F0F260A01829D38 /* Support Files */,
+			);
+			name = CLAspects;
+			path = /Users/lion/CLAspects;
+			sourceTree = "<absolute>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0F1C2D2742A4F1F17ED6C4C0585E9FB6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1883F4385169E8220A23A3B095BE1884 /* CLAConfigOptions.h in Headers */,
+				4E12BC1E33C94AD0FEB28EFC78FAC189 /* CLAspects.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		602FDBABC0EE1E1A56796425E235AB46 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,14 +245,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B61E91A1CF1441B9014127E68F506202 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D2E34223269A0916568D7EA8FA0D52B7 /* CLAspects.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +262,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				2BA7C8476B886167431BCB99FA8B117B /* PBXTargetDependency */,
-				C1EB823FAF0DD65E3BC6EA1E4F9F6E1F /* PBXTargetDependency */,
+				4BA4B927272BAF294536AB8BEF5A9ACB /* PBXTargetDependency */,
+				3FAD53E548590A61893B80958F83E2A0 /* PBXTargetDependency */,
 			);
 			name = "Pods-Example";
 			productName = "Pods-Example";
@@ -265,16 +272,16 @@
 		};
 		A59CD135374A833F453EE431100C569A /* CLAspects */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8DBA2554C06B0BD008A0C4634641F5C /* Build configuration list for PBXNativeTarget "CLAspects" */;
+			buildConfigurationList = 34DBCB8F0766F10ADCDD24B0CC871055 /* Build configuration list for PBXNativeTarget "CLAspects" */;
 			buildPhases = (
-				B61E91A1CF1441B9014127E68F506202 /* Headers */,
-				934B5621BB0B4264864D371E6ABB275D /* Sources */,
-				3EF4A2FE74FA5D066FC81B7CA021F1CE /* Frameworks */,
+				0F1C2D2742A4F1F17ED6C4C0585E9FB6 /* Headers */,
+				BB2C5A4A7B2CA7689BD23112D528676A /* Sources */,
+				12620CF954D12C7573D293DC6782490C /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				999AC17784447C12467ABC64D0D97833 /* PBXTargetDependency */,
+				53970593A43A7B84144D695E3CE7302C /* PBXTargetDependency */,
 			);
 			name = CLAspects;
 			productName = CLAspects;
@@ -337,15 +344,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		934B5621BB0B4264864D371E6ABB275D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9BAEFC284B1CD0953CF303F551E5097 /* CLAspects.m in Sources */,
-				FD3F7A1743CD7BCB15344C71FE16EB79 /* CLAspects-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AE545691AC9CDD0E369B6CE101C92EAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,30 +352,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB2C5A4A7B2CA7689BD23112D528676A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1522CD935DCA2963232BDEB62E92A973 /* CLAConfigOptions.m in Sources */,
+				7CF1484AA5CC1843AE45C4CA0C0D1142 /* CLAspects.m in Sources */,
+				7F63909F08B4B6E09A847845F8696F29 /* CLAspects-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2BA7C8476B886167431BCB99FA8B117B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Aspects;
-			target = C6539905C4D50932B36244650B93C79B /* Aspects */;
-			targetProxy = 9E157ADCF2EBFC139477599B899AB0FC /* PBXContainerItemProxy */;
-		};
-		999AC17784447C12467ABC64D0D97833 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Aspects;
-			target = C6539905C4D50932B36244650B93C79B /* Aspects */;
-			targetProxy = 2EC712DA200BCC22B098911BF39C3199 /* PBXContainerItemProxy */;
-		};
-		C1EB823FAF0DD65E3BC6EA1E4F9F6E1F /* PBXTargetDependency */ = {
+		3FAD53E548590A61893B80958F83E2A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CLAspects;
 			target = A59CD135374A833F453EE431100C569A /* CLAspects */;
-			targetProxy = 66863EE227A475DDFE8B51D67BEF3ED9 /* PBXContainerItemProxy */;
+			targetProxy = FF675F6F295D5DB4F595189CFCCA76ED /* PBXContainerItemProxy */;
+		};
+		4BA4B927272BAF294536AB8BEF5A9ACB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Aspects;
+			target = C6539905C4D50932B36244650B93C79B /* Aspects */;
+			targetProxy = BD5F6842E2CFF0CE6E7BBE431AC4E3BC /* PBXContainerItemProxy */;
+		};
+		53970593A43A7B84144D695E3CE7302C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Aspects;
+			target = C6539905C4D50932B36244650B93C79B /* Aspects */;
+			targetProxy = E27A34C632CB509C56B0EE4423ACE3DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2F04542B9DD8A33D5FAC688AF3DEC107 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A87323D09777044A5BCB323712546A1D /* CLAspects.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CLAspects/CLAspects-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CLAspects;
+				PRODUCT_NAME = CLAspects;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		428BC8818B30C402A895B01FAAAA5CF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 873CDB2CE2AB3D55E7F7846B54D0067E /* Pods-Example.debug.xcconfig */;
@@ -395,6 +426,28 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FE2A7F305911032C61B89A571881B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 357D2DB6E0666AB0C7275BFF8A9C9B4B /* CLAspects.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CLAspects/CLAspects-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CLAspects;
+				PRODUCT_NAME = CLAspects;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -550,29 +603,6 @@
 			};
 			name = Debug;
 		};
-		B5A19C7136661FF9AAB81DCA474D553F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB32DF2C4975E98BB21227BCC10F8D88 /* CLAspects.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CLAspects/CLAspects-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CLAspects;
-				PRODUCT_NAME = CLAspects;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		C08FB427C45099936D83E2B01EC98DB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 618D517A4DCA886A6D4D0BEAB51D0813 /* Aspects.debug.xcconfig */;
@@ -587,28 +617,6 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = Aspects;
 				PRODUCT_NAME = Aspects;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F7EC1947BF22FD279A0605878B2D6D5E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FB5EC386DEEED90E59F9E7545FAB020 /* CLAspects.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CLAspects/CLAspects-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CLAspects;
-				PRODUCT_NAME = CLAspects;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -642,6 +650,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		34DBCB8F0766F10ADCDD24B0CC871055 /* Build configuration list for PBXNativeTarget "CLAspects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FE2A7F305911032C61B89A571881B0C /* Debug */,
+				2F04542B9DD8A33D5FAC688AF3DEC107 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -665,15 +682,6 @@
 			buildConfigurations = (
 				428BC8818B30C402A895B01FAAAA5CF4 /* Debug */,
 				F964665B7867AE207E9F807B65865C08 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D8DBA2554C06B0BD008A0C4634641F5C /* Build configuration list for PBXNativeTarget "CLAspects" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F7EC1947BF22FD279A0605878B2D6D5E /* Debug */,
-				B5A19C7136661FF9AAB81DCA474D553F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

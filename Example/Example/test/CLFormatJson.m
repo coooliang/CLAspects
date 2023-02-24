@@ -7,6 +7,28 @@
 #import "CLFormatJson.h"
 #import <UIKit/UIKit.h>
 
+#import <WebKit/WebKit.h>
+@interface CLWebViewController : UINavigationController
+
+@end
+
+@implementation CLWebViewController{
+    WKWebView *_webView;
+}
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    _webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, CGRectGetHeight(self.navigationBar.frame), UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height-CGRectGetHeight(self.navigationBar.frame))];
+    [self.view addSubview:_webView];
+}
+
+-(void)loadHtml:(NSString *)string{
+    [_webView loadHTMLString:string baseURL:nil];
+}
+
+@end
+
+
 @implementation CLFormatJson
 
 -(void)printToConsole:(NSArray *)array{
@@ -72,14 +94,6 @@
 }
 -(void)printToHtml:(NSArray *)array{
     NSArray *arr = [self neatenArray:array];
-    NSString *docsdir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *htmlFilePath = [docsdir stringByAppendingPathComponent:@"md.html"]; // 在指定目录下创建 "head" 文件夹
-    BOOL isDir = NO;
-    BOOL existed = [[NSFileManager defaultManager]fileExistsAtPath:htmlFilePath isDirectory:&isDir];
-    if (!(isDir && existed)) {
-        [[NSFileManager defaultManager]createFileAtPath:htmlFilePath contents:nil attributes:nil];
-    }
-    
     NSMutableString *string = [NSMutableString stringWithCapacity:0];
     [string appendString:@"<html>"];
     [string appendString:@"<head>"];
@@ -105,8 +119,11 @@
     [string appendString:@"</body>"];
     [string appendString:@"</html>"];
     
-    [string writeToFile:htmlFilePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    NSLog(@"htmlFilePath = \n%@",htmlFilePath);
+    
+    CLWebViewController *vc = [[CLWebViewController alloc]init];
+    [vc loadHtml:string];
+    UINavigationController *rootVC = (UINavigationController *)UIApplication.sharedApplication.delegate.window.rootViewController;
+    [rootVC pushViewController:vc animated:YES];
 }
 
 /*
@@ -200,3 +217,4 @@
 }
 
 @end
+

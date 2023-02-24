@@ -7,19 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "CLAConfigOptions.h"
 
 @interface CLAspects : NSObject
 
 + (CLAspects *)sharedInstance;
 
 - (void)aop;
-
-- (void)setDebug:(BOOL)d;
-
-@property (nonatomic,strong)NSString *fileName;
+- (void)aop:(CLAConfigOptions *)configOptions block:(void(^)(NSDictionary *result))block;
 
 @end
 
-NS_ASSUME_NONNULL_END
+    

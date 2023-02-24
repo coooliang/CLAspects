@@ -14,11 +14,12 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    [[CLAspects sharedInstance]setDebug:YES];
-    [[CLAspects sharedInstance]aop];
+    CLAConfigOptions *configOptions = [[CLAConfigOptions alloc]init];
+    configOptions.enableLog = YES;
+    [[CLAspects sharedInstance]aop:configOptions block:^(NSDictionary *result) {
+        NSLog(@"result = %@",[self stringByReplaceUnicode:result[@"html"]]);
+    }];
     
     ViewController *viewController = [[ViewController alloc]init];
     UINavigationController *root = [[UINavigationController alloc]initWithRootViewController:viewController];
@@ -26,12 +27,19 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window setRootViewController:root];
     [self.window makeKeyAndVisible];
-    
-    
     return YES;
 }
 
- 
-
+- (NSString *)stringByReplaceUnicode:(NSString *)printString {
+    NSMutableString *convertedString = [printString mutableCopy];
+    [convertedString replaceOccurrencesOfString:@"\\U"
+                                     withString:@"\\u"
+                                        options:0
+                                          range:NSMakeRange(0, convertedString.length)];
+    
+    CFStringRef transform = CFSTR("Any-Hex/Java");
+    CFStringTransform((__bridge CFMutableStringRef)convertedString, NULL, transform, YES);
+    return convertedString;
+}
 
 @end
