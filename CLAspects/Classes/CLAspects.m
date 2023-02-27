@@ -9,21 +9,43 @@
 #import "CLAspects.h"
 #import "Aspects.h"
 #import <WebKit/WebKit.h>
+#import <UIKit/UIKit.h>
 
 @interface CLAWebViewController : UIViewController
 @property (nonatomic,strong)WKWebView *webView;
 @end
 
-@implementation CLAWebViewController
+@interface CLAWebViewController()<WKNavigationDelegate>
+
+@end
+@implementation CLAWebViewController {
+    UIActivityIndicatorView *_activityView;
+}
 
 - (instancetype)init {
     self = [super init];
     if (self) {
         _webView = [[WKWebView alloc]initWithFrame:self.view.bounds];
         [self.view addSubview:_webView];
+        _webView.navigationDelegate = self;
+        _activityView = [[UIActivityIndicatorView alloc]initWithFrame:_webView.bounds];
+        [_webView addSubview:_activityView];
     }
     return self;
 }
+
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+        [_activityView startAnimating];
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    [_activityView stopAnimating];
+}
+
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
+    [_activityView stopAnimating];
+}
+
 
 @end
 
@@ -135,7 +157,7 @@ static CLAspects *instance = nil;
         [string appendString:@"<head>"];
         [string appendString:@"<meta charset='utf-8' />"];
         [string appendString:@"<meta name=\"viewport\" content=\"width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no\"/>"];
-        [string appendString:@"<style type=\"text/css\">.xwtable { width: 100%; border-collapse: collapse; border: 1px solid #ccc; } .xwtable thead td { font-size: 12px; color: #333333; text-align: center; border: 1px solid #ccc; font-weight: bold; } .xwtable tbody tr { background: #fff; font-size: 12px; color: #666666; } .xwtable tbody tr.alt-row { background: #f2f7fc; } .xwtable td { line-height: 20px; text-align: left; padding: 4px 10px 3px 10px; height: 18px; border: 1px solid #ccc; }</style>"];
+        [string appendString:@"<style type=\"text/css\">.xwtable { width: 100%; border-collapse: collapse; border: 1px solid #ccc; } .xwtable thead td { font-size: 12px; color: #333333; text-align: center; border: 1px solid #ccc; font-weight: bold; } .xwtable tbody tr { background: #fff; font-size: 12px; color: #666666; } .xwtable tbody tr.alt-row { background: #f2f7fc; } .xwtable td { line-height: 20px; text-align: left; padding: 4px 10px 3px 10px; height: 18px; border: 1px solid #ccc; white-space: nowrap;}</style>"];
         [string appendString:@"</head>"];
         
         [string appendString:@"<body>"];
@@ -180,9 +202,8 @@ static CLAspects *instance = nil;
 - (void)showWebVC{
     CLAWebViewController *vc = [[CLAWebViewController alloc]init];
     [vc.webView loadHTMLString:_html baseURL:nil];
-    UINavigationController *navVC = (UINavigationController *)UIApplication.sharedApplication.windows.firstObject.rootViewController;
+    UINavigationController *navVC = (UINavigationController *)UIApplication.sharedApplication.keyWindow.rootViewController;
     [navVC pushViewController:vc animated:YES];
-    
 }
 
 - (UIColor *)colorWithHexString:(NSString *)stringToConvert{

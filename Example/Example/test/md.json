@@ -1,6 +1,6 @@
 [
     {
-        "eventName": "点击立即注册",
+        "eventName": "点击立",
         "eventId": "Register_Begin_Button",
         "eventLabels": {
             "Channel": "$channel",
@@ -14,7 +14,7 @@
         "desc": "渠道(Channel)"
     },
     {
-        "eventName": "点击立即注册",
+        "eventName": "点击立即",
         "eventId": "Register_Begin_Button",
         "eventLabels": {
             "Channel": "$channel",
@@ -42,7 +42,7 @@
         "desc": "渠道(Channel)"
     },
     {
-        "eventName": "点击立即注册",
+        "eventName": "点击立即注册注册",
         "eventId": "Register_Begin_Button",
         "eventLabels": {
             "Channel": "$channel",
@@ -50,7 +50,7 @@
             "VersionNumber": "4.5.3"
         },
         "md": {
-            "class": "TestViewController",
+            "class": "ViewController",
             "method": "viewDidLoad"
         },
         "desc": "渠道(Channel)"
