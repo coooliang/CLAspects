@@ -11,7 +11,7 @@
 - (instancetype)initWithFileName:(NSString *)fileName;
 
 @property (nonatomic,strong)NSString *fileName;
-@property (nonatomic,assign)BOOL enableLog;
+@property (nonatomic,assign)BOOL debug;
 
 @end
 

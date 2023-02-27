@@ -15,20 +15,22 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    CLAConfigOptions *options = [[CLAConfigOptions alloc]init];
-//    options.enableLog = YES;
-    [[CLAspects sharedInstance]aop:options block:^(NSDictionary *result) {
-        NSLog(@"result = %@",result);
-    } configBlock:^(NSString *html) {
-        NSLog(@"config = %@",html);
-    }];
-    
     ViewController *viewController = [[ViewController alloc]init];
     UINavigationController *root = [[UINavigationController alloc]initWithRootViewController:viewController];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window setRootViewController:root];
     [self.window makeKeyAndVisible];
+    
+    
+    CLAConfigOptions *options = [[CLAConfigOptions alloc]init];
+    options.debug = YES;
+    [[CLAspects sharedInstance]aop:options block:^(NSDictionary *result) {
+        NSLog(@"result = %@",result);
+    } configBlock:^(NSString *html) {
+        NSLog(@"config = %@",html);
+    }];
+    
     return YES;
 }
 

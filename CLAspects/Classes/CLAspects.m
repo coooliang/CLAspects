@@ -8,6 +8,24 @@
 
 #import "CLAspects.h"
 #import "Aspects.h"
+#import <WebKit/WebKit.h>
+
+@interface CLAWebViewController : UIViewController
+@property (nonatomic,strong)WKWebView *webView;
+@end
+
+@implementation CLAWebViewController
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _webView = [[WKWebView alloc]initWithFrame:self.view.bounds];
+        [self.view addSubview:_webView];
+    }
+    return self;
+}
+
+@end
 
 typedef void (^ConfigBlock)(NSString *html);
 typedef void (^Callback)(NSDictionary *result);
@@ -16,6 +34,8 @@ typedef void (^Callback)(NSDictionary *result);
     
     ConfigBlock _configBlock;
     Callback _block;
+    
+    NSString *_html;
 }
 
 //单例
@@ -43,7 +63,7 @@ static CLAspects *instance = nil;
     if(data){
         NSArray *points = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         [self aspect:points];
-        if(configOptions.enableLog){
+        if(configOptions.debug){
             [self printExampleJson];
         }
         [self printToHtml:points];
@@ -113,7 +133,8 @@ static CLAspects *instance = nil;
         [string appendString:@"<!DOCTYPE html>"];
         [string appendString:@"<html>"];
         [string appendString:@"<head>"];
-        [string appendString:@"<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0\"/>"];
+        [string appendString:@"<meta charset='utf-8' />"];
+        [string appendString:@"<meta name=\"viewport\" content=\"width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no\"/>"];
         [string appendString:@"<style type=\"text/css\">.xwtable { width: 100%; border-collapse: collapse; border: 1px solid #ccc; } .xwtable thead td { font-size: 12px; color: #333333; text-align: center; border: 1px solid #ccc; font-weight: bold; } .xwtable tbody tr { background: #fff; font-size: 12px; color: #666666; } .xwtable tbody tr.alt-row { background: #f2f7fc; } .xwtable td { line-height: 20px; text-align: left; padding: 4px 10px 3px 10px; height: 18px; border: 1px solid #ccc; }</style>"];
         [string appendString:@"</head>"];
         
@@ -137,9 +158,51 @@ static CLAspects *instance = nil;
         [string appendString:@"</table>"];
         [string appendString:@"</body>"];
         [string appendString:@"</html>"];
-        
         _configBlock(string);
+        
+        if(_configOptions.debug){
+            _html = string;
+            UIColor *color = [self colorWithHexString:@"209cf0"];
+            UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(UIScreen.mainScreen.bounds.size.width-45, UIScreen.mainScreen.bounds.size.height-150, 35, 35)];
+            [button setTitle:@"MD" forState:UIControlStateNormal];
+            [button setTitleColor:color forState:UIControlStateNormal];
+            button.titleLabel.font = [UIFont systemFontOfSize:12];
+            button.layer.borderColor = color.CGColor;
+            button.layer.borderWidth = 1;
+            button.layer.cornerRadius = 5;
+            button.layer.masksToBounds = YES;
+            [UIApplication.sharedApplication.keyWindow addSubview:button];
+            [button addTarget:self action:@selector(showWebVC) forControlEvents:UIControlEventTouchUpInside];
+        }
     }
+}
+
+- (void)showWebVC{
+    CLAWebViewController *vc = [[CLAWebViewController alloc]init];
+    [vc.webView loadHTMLString:_html baseURL:nil];
+    UINavigationController *navVC = (UINavigationController *)UIApplication.sharedApplication.windows.firstObject.rootViewController;
+    [navVC pushViewController:vc animated:YES];
+    
+}
+
+- (UIColor *)colorWithHexString:(NSString *)stringToConvert{
+    NSString *cString = [[stringToConvert stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+    if ([cString length] < 6) return [UIColor blackColor];
+    if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
+    if ([cString length] != 6) return [UIColor blackColor];
+    NSRange range;
+    range.location = 0;
+    range.length = 2;
+    NSString *rString = [cString substringWithRange:range];
+    range.location = 2;
+    NSString *gString = [cString substringWithRange:range];
+    range.location = 4;
+    NSString *bString = [cString substringWithRange:range];
+    unsigned int r, g, b;
+    [[NSScanner scannerWithString:rString] scanHexInt:&r];
+    [[NSScanner scannerWithString:gString] scanHexInt:&g];
+    [[NSScanner scannerWithString:bString] scanHexInt:&b];
+    return [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f) blue:((float) b / 255.0f) alpha:1];
 }
 
 #pragma mark -
