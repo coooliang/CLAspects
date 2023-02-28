@@ -97,18 +97,18 @@ static CLAspects *instance = nil;
     NSString *mdJson = @"\n \
     [\n \
         {\n \
-            \"eventName\": \"点击立即注册\",\n \
             \"eventId\": \"Register_Begin_Button\",\n \
-            \"eventLabels\": {\n \
+            \"eventName\": \"点击立即注册\",\n \
+            \"props\": {\n \
                 \"Channel\": \"$channel\",\n \
                 \"Equipment\": \"$Equipment\",\n \
                 \"VersionNumber\": \"4.5.3\"\n \
             },\n \
-            \"md\": {\n \
-                \"class\": \"TestViewController\",\n \
-                \"method\": \"viewDidLoad\"\n \
+            \"aop-class\": \"TestViewController\",\n \
+            \"aop-method\": \"viewDidLoad\"\n \
+            \"desc\": {\n \
+                \"remark\": \"渠道(Channel):微站、app标准版...\",\n \
             },\n \
-            \"desc\":\ \"渠道(Channel)\"\n \
         }\n \
     ]";
     NSLog(@"md.json For Example : \n %@",mdJson);
@@ -116,34 +116,35 @@ static CLAspects *instance = nil;
 
 /*
  {
- "eventName": "点击立即注册",
- "eventId": "Register_Begin_Button",
- "eventLabels": {
- "Channel": "$channel",
- "Equipment": "$Equipment",
- "VersionNumber": "4.5.3"
- },
- "md": {
- "class": "TestViewController",
- "method": "viewDidLoad"
- },
- "desc": "渠道(Channel):微站、app标准版、app关怀版、非营销人员老带新、营销人员老带新、web端、柜面扫码;设备(Equipment):安卓(具体系统型号)、ios苹果(具体系统型号)、pc(具体系统型号)、平板(具体系统型号);版本号(VersionNumber):当前事件对应的版本号"
+   "eventId": "Register_Begin_Button",
+   "eventName": "点击立",
+   "props": {
+     "Channel": "$channel",
+     "Equipment": "$Equipment",
+     "VersionNumber": "4.5.3"
+   },
+   "desc": {
+     "Channel": "渠道:微站、app标准版、app关怀版、非营销人员老带新、营销人员老带新、web端、柜面扫码;",
+     "Equipment": "设备:安卓(具体系统型号)、ios苹果(具体系统型号)、pc(具体系统型号)、平板(具体系统型号)",
+     "VersionNumber": "版本号:当前事件对应的版本号"
+   },
+   "aop-class": "TestViewController",
+   "aop-method": "viewDidLoad"
  }
  */
 -(NSArray *)neatenArray:(NSArray *)array{
     NSMutableArray *arr = [NSMutableArray arrayWithCapacity:array.count];
     for (NSDictionary *dict in array) {
-        NSDictionary *eventLabelsDict = [dict objectForKey:@"eventLabels"];
-        NSDictionary *md = [dict objectForKey:@"md"];
-        NSString *eventName = [dict objectForKey:@"eventName"];
+        NSDictionary *propsDict = [dict objectForKey:@"props"];
         NSString *eventId = [dict objectForKey:@"eventId"];
-        NSString *eventLabels = @"";
-        if(eventLabelsDict){
-            eventLabels = [eventLabelsDict.allKeys componentsJoinedByString:@","];
+        NSString *eventName = [dict objectForKey:@"eventName"];
+        NSString *props = @"";
+        if(propsDict){
+            props = [propsDict.allKeys componentsJoinedByString:@","];
         }
-        NSString *class = [md objectForKey:@"class"];
-        NSString *method = [md objectForKey:@"method"];
-        [arr addObject:@[eventName,eventId,eventLabels,class,method]];
+        NSString *class = [dict objectForKey:@"aop-class"];
+        NSString *method = [dict objectForKey:@"aop-method"];
+        [arr addObject:@[eventName,eventId,props,class,method]];
     }
     return arr;
 }
@@ -166,7 +167,7 @@ static CLAspects *instance = nil;
         
         [string appendString:@"<table class=\"xwtable\">"];
         
-        //eventName,eventId,eventLabels,class,method
+        //eventName,eventId,props,class,method
         [string appendString:@"<thead> <tr> <td>事件名称</td> <td>事件ID</td> <td>事件属性</td> <td>类名</td> <td>方法名</td> </tr> </thead>"];
         
         [string appendString:@"<tbody>"];
@@ -230,15 +231,12 @@ static CLAspects *instance = nil;
 - (void)aspect:(NSArray *)points {
     if(points && [points isKindOfClass:[NSArray class]] && points.count > 0){
         for (NSDictionary *point in points) {
-            NSDictionary *md = [point objectForKey:@"md"];
-            if(md && [md isKindOfClass:[NSDictionary class]] && md.count > 0){
-                NSString *className = [md objectForKey:@"class"];
-                NSString *method = [md objectForKey:@"method"];
-                [self after:className method:method callback:^(id<AspectInfo> aspectInfo) {
-                    NSDictionary *props = [self transferProps:point[@"eventLabels"] target:aspectInfo.instance];
-                    if(_block)_block(@{@"props":props});
-                }];
-            }
+            NSString *className = [point objectForKey:@"aop-class"];
+            NSString *method = [point objectForKey:@"aop-method"];
+            [self after:className method:method callback:^(id<AspectInfo> aspectInfo) {
+                NSDictionary *props = [self transferProps:point[@"props"] target:aspectInfo.instance];
+                if(_block)_block(@{@"props":props});
+            }];
         }
     }
 }
@@ -264,18 +262,6 @@ static CLAspects *instance = nil;
         }
     }
     return result;
-}
-
-- (NSString *)stringByReplaceUnicode:(NSString *)printString {
-    NSMutableString *convertedString = [printString mutableCopy];
-    [convertedString replaceOccurrencesOfString:@"\\U"
-                                     withString:@"\\u"
-                                        options:0
-                                          range:NSMakeRange(0, convertedString.length)];
-    
-    CFStringRef transform = CFSTR("Any-Hex/Java");
-    CFStringTransform((__bridge CFMutableStringRef)convertedString, NULL, transform, YES);
-    return convertedString;
 }
 
 #pragma mark - loadConfigWithFileName

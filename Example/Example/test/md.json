@@ -1,58 +1,45 @@
-[
+{
+  "points": [
     {
-        "eventName": "点击立",
-        "eventId": "Register_Begin_Button",
-        "eventLabels": {
-            "Channel": "$channel",
-            "Equipment": "$Equipment",
-            "VersionNumber": "4.5.3"
-        },
-        "md": {
-            "class": "TestViewController",
-            "method": "viewDidLoad"
-        },
-        "desc": "渠道(Channel)"
+      "eventId": "Register_Begin_Button",
+      "eventName": "点击立",
+      "props": {
+        "Channel": "$channel",
+        "Equipment": "$Equipment",
+        "VersionNumber": "4.5.3"
+      },
+      "aop-class": "TestViewController",
+      "aop-method": "viewDidLoad"
     },
     {
-        "eventName": "点击立即",
-        "eventId": "Register_Begin_Button",
-        "eventLabels": {
-            "Channel": "$channel",
-            "Equipment": "$Equipment",
-            "VersionNumber": "4.5.3"
-        },
-        "md": {
-            "class": "TestViewController",
-            "method": "viewDidLoad"
-        },
-        "desc": "渠道(Channel)"
+      "eventId": "Register_Begin_Button",
+      "eventName": "点击立",
+      "props": {
+        "Channel": "$channel",
+        "Equipment": "$Equipment",
+        "VersionNumber": "4.5.3"
+      },
+      "desc": {
+        "Channel": "渠道:微站、app标准版、app关怀版、非营销人员老带新、营销人员老带新、web端、柜面扫码;",
+        "Equipment": "设备:安卓(具体系统型号)、ios苹果(具体系统型号)、pc(具体系统型号)、平板(具体系统型号)",
+        "VersionNumber": "版本号:当前事件对应的版本号"
+      },
+      "aop-class": "TestViewController",
+      "aop-method": "viewDidLoad"
     },
     {
-        "eventName": "点击立即注册",
-        "eventId": "Register_Begin_Button",
-        "eventLabels": {
-            "Channel": "$channel",
-            "Equipment": "$Equipment",
-            "VersionNumber": "4.5.3"
-        },
-        "md": {
-            "class": "ViewController",
-            "method": "viewDidLoad"
-        },
-        "desc": "渠道(Channel)"
-    },
-    {
-        "eventName": "点击立即注册注册",
-        "eventId": "Register_Begin_Button",
-        "eventLabels": {
-            "Channel": "$channel",
-            "Equipment": "$Equipment",
-            "VersionNumber": "4.5.3"
-        },
-        "md": {
-            "class": "ViewController",
-            "method": "viewDidLoad"
-        },
-        "desc": "渠道(Channel)"
+      "eventId": "Register_Begin_Button",
+      "eventName": "点击立",
+      "aop-class": "TestViewController",
+      "aop-method": "viewDidLoad",
+      "props": {
+        "Channel": "$channel",
+        "Equipment": "$Equipment",
+        "VersionNumber": "4.5.3"
+      },
+      "desc": {
+        "remark": "渠道(Channel):微站、app标准版、app关怀版、非营销人员老带新、营销人员老带新、web端、柜面扫码;设备(Equipment):安卓(具体系统型号)、ios苹果(具体系统型号)、pc(具体系统型号)、平板(具体系统型号);版本号(VersionNumber):当前事件对应的版本号"
+      }
     }
-]
+  ]
+}
