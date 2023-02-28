@@ -83,34 +83,39 @@ static CLAspects *instance = nil;
     _block = block;
     NSData *data = [self loadConfigWithFileName:configOptions.fileName];
     if(data){
-        NSArray *points = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        [self aspect:points];
-        if(configOptions.debug){
-            [self printExampleJson];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        if(dict && [dict isKindOfClass:[NSDictionary class]] && dict.count > 0){
+            NSArray *points = [dict objectForKey:@"points"];
+            [self aspect:points];
+            if(configOptions.debug){
+                [self printExampleJson];
+            }
+            [self printToHtml:points];
         }
-        [self printToHtml:points];
     }
 }
 
 #pragma mark - 
 - (void)printExampleJson {
     NSString *mdJson = @"\n \
-    [\n \
-        {\n \
-            \"eventId\": \"Register_Begin_Button\",\n \
-            \"eventName\": \"点击立即注册\",\n \
-            \"props\": {\n \
-                \"Channel\": \"$channel\",\n \
-                \"Equipment\": \"$Equipment\",\n \
-                \"VersionNumber\": \"4.5.3\"\n \
-            },\n \
-            \"aop-class\": \"TestViewController\",\n \
-            \"aop-method\": \"viewDidLoad\"\n \
-            \"desc\": {\n \
-                \"remark\": \"渠道(Channel):微站、app标准版...\",\n \
-            },\n \
-        }\n \
-    ]";
+    {\n \
+      \"point\":[\n \
+                {\n \
+                    \"eventId\": \"Register_Begin_Button\",\n \
+                    \"eventName\": \"点击立即注册\",\n \
+                    \"props\": {\n \
+                        \"Channel\": \"$channel\",\n \
+                        \"Equipment\": \"$Equipment\",\n \
+                        \"VersionNumber\": \"4.5.3\"\n \
+                    },\n \
+                    \"aop-class\": \"TestViewController\",\n \
+                    \"aop-method\": \"viewDidLoad\"\n \
+                    \"desc\": {\n \
+                        \"remark\": \"渠道(Channel):微站、app标准版...\",\n \
+                    },\n \
+                }\n \
+            ]\n \
+    }";
     NSLog(@"md.json For Example : \n %@",mdJson);
 }
 
