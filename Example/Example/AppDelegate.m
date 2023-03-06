@@ -22,7 +22,13 @@
     [self.window setRootViewController:root];
     [self.window makeKeyAndVisible];
     
-    
+    [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:NO block:^(NSTimer * _Nonnull timer) {
+        [self md];
+    }];
+    return YES;
+}
+
+- (void)md {
     CLAConfigOptions *options = [[CLAConfigOptions alloc]init];
     options.debug = YES;
     [[CLAspects sharedInstance]aop:options block:^(NSDictionary *result) {
@@ -30,8 +36,6 @@
     } configBlock:^(NSString *html) {
         NSLog(@"config = %@",html);
     }];
-    
-    return YES;
 }
 
 - (NSString *)stringByReplaceUnicode:(NSString *)printString {
