@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "properties": {
+    "points": {
+      "type": "array",
+      "items": [
+        {
+          "#ref": "#/definitions/point"
+        }
+      ]
+    }
+  },
+  "required": [
+    "points"
+  ],
+  "definitions": {
+    "point": {
+      "type": "object",
+      "properties": {
+        "eventId": {
+          "type": "string"
+        },
+        "eventName": {
+          "type": "string"
+        },
+        "aop-class": {
+          "type": "string"
+        },
+        "aop-method": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "eventId",
+        "eventName",
+        "aop-class",
+        "aop-method"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
