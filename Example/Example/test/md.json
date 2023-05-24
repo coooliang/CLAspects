@@ -1,7 +1,7 @@
 {
-    "$schema": "./claspects.json",
     "points": [
         {
+            "eventId": "Register_Begin_Button",
             "eventName": "点击立",
             "props": {
                 "Channel": "$channel",

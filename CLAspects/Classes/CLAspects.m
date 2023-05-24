@@ -116,7 +116,7 @@ static CLAspects *instance = nil;
                 }\n \
             ]\n \
     }";
-    NSLog(@"md.json For Example : \n %@",mdJson);
+    NSLog(@"Example for md.json : \n %@",mdJson);
 }
 
 /*
@@ -240,7 +240,9 @@ static CLAspects *instance = nil;
             NSString *method = [point objectForKey:@"aop-method"];
             [self after:className method:method callback:^(id<AspectInfo> aspectInfo) {
                 NSDictionary *props = [self transferProps:point[@"props"] target:aspectInfo.instance];
-                if(_block)_block(@{@"props":props});
+                NSMutableDictionary *rs = [NSMutableDictionary dictionaryWithDictionary:point];
+                [rs setObject:props forKey:@"props"];
+                if(_block)_block(rs);
             }];
         }
     }

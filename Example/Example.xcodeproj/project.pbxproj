@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9B9724DBB9FACBCAE18695CF /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5B1008607D7F0CEDB101FC /* libPods-Example.a */; };
-		B466917429D27C1C000FCD01 /* claspects.schema in Resources */ = {isa = PBXBuildFile; fileRef = B466917329D27C1C000FCD01 /* claspects.schema */; };
+		B45313202A1DF52A007A7029 /* md.png in Resources */ = {isa = PBXBuildFile; fileRef = B453131F2A1DF52A007A7029 /* md.png */; };
+		B45313252A1DFA1D007A7029 /* html in Resources */ = {isa = PBXBuildFile; fileRef = B45313242A1DFA1D007A7029 /* html */; };
 		B4EFD88B29A4BE0500464FE9 /* md.json in Resources */ = {isa = PBXBuildFile; fileRef = B4EFD88A29A4BE0500464FE9 /* md.json */; };
 		B4F97F04299F60110047C02E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F97F03299F60110047C02E /* AppDelegate.m */; };
 		B4F97F0A299F60110047C02E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F97F09299F60110047C02E /* ViewController.m */; };
@@ -25,7 +26,8 @@
 		0C5B1008607D7F0CEDB101FC /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F7D6C186B37FD7486F4743 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8524A27401B961B29B83B4D7 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		B466917329D27C1C000FCD01 /* claspects.schema */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = claspects.schema; sourceTree = "<group>"; };
+		B453131F2A1DF52A007A7029 /* md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = md.png; sourceTree = "<group>"; };
+		B45313242A1DFA1D007A7029 /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		B4EFD88A29A4BE0500464FE9 /* md.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = md.json; sourceTree = "<group>"; };
 		B4F97EFF299F60110047C02E /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F97F02299F60110047C02E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		B4F97F01299F60110047C02E /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				B45313242A1DFA1D007A7029 /* html */,
 				B4F97F1B299F62070047C02E /* test */,
 				B4F97F02299F60110047C02E /* AppDelegate.h */,
 				B4F97F03299F60110047C02E /* AppDelegate.m */,
@@ -111,7 +114,7 @@
 				B4F97F1D299F621D0047C02E /* TestViewController.h */,
 				B4F97F1E299F621E0047C02E /* TestViewController.m */,
 				B4EFD88A29A4BE0500464FE9 /* md.json */,
-				B466917329D27C1C000FCD01 /* claspects.schema */,
+				B453131F2A1DF52A007A7029 /* md.png */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -182,7 +185,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B466917429D27C1C000FCD01 /* claspects.schema in Resources */,
+				B45313202A1DF52A007A7029 /* md.png in Resources */,
+				B45313252A1DFA1D007A7029 /* html in Resources */,
 				B4EFD88B29A4BE0500464FE9 /* md.json in Resources */,
 				B4F97F12299F60130047C02E /* LaunchScreen.storyboard in Resources */,
 				B4F97F0F299F60130047C02E /* Assets.xcassets in Resources */,
@@ -369,9 +373,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4ME4HAHBAA;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = D38C434CHM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -386,6 +392,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cib.yypt.test.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = YinYinPingTai;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -397,9 +405,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4ME4HAHBAA;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = D38C434CHM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -414,6 +424,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cib.yypt.test.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = YinYinPingTai;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

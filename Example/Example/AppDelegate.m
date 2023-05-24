@@ -22,9 +22,7 @@
     [self.window setRootViewController:root];
     [self.window makeKeyAndVisible];
     
-    [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:NO block:^(NSTimer * _Nonnull timer) {
-        [self md];
-    }];
+    [self md];
     return YES;
 }
 
@@ -34,7 +32,7 @@
     [[CLAspects sharedInstance]aop:options block:^(NSDictionary *result) {
         NSLog(@"result = %@",result);
     } configBlock:^(NSString *html) {
-        NSLog(@"config = %@",html);
+        NSLog(@"html = %@",html);
     }];
 }
 
