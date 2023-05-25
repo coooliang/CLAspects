@@ -9,7 +9,7 @@
                 "VersionNumber": "4.5.3"
             },
             "aop-class": "TestViewController",
-            "aop-method": "viewDidLoad"
+            "aop-method": "vc1"
         },
         {
             "eventId": "Register_Begin_Button",

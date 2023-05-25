@@ -21,6 +21,11 @@
     self.title = @"TestViewController";
     self.channel = @"channel 123";
     // Do any additional setup after loading the view.
+    [self vc1];
+}
+
+-(void)vc1{
+    //Aspects: Error: vc1 already hooked in TestViewController. A method can only be hooked once per class hierarchy.
 }
 
 - (void)viewDidAppear:(BOOL)animated {
