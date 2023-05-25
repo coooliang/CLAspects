@@ -22,6 +22,12 @@
     button.titleLabel.font = [UIFont boldSystemFontOfSize:20];
     [self.view addSubview:button];
     [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self vc1];
+}
+
+-(void)vc1{
+    
 }
 
 - (void)buttonClick {
