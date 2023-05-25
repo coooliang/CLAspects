@@ -17,7 +17,7 @@
     [super viewDidLoad];
     self.title = @"埋点测试";
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 40)];
-    [button setTitle:@"test" forState:UIControlStateNormal];
+    [button setTitle:@"click" forState:UIControlStateNormal];
     [button setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont boldSystemFontOfSize:20];
     [self.view addSubview:button];
