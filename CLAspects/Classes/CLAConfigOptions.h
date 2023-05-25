@@ -8,10 +8,11 @@
 
 @interface CLAConfigOptions : NSObject
 
-- (instancetype)initWithFileName:(NSString *)fileName;
++ (NSString *)fileName;
++ (void)setFileName:(NSString *)fileName;
 
-@property (nonatomic,strong)NSString *fileName;
-@property (nonatomic,assign)BOOL debug;
++ (BOOL)debug;
++ (void)setDebug:(BOOL)debug;
 
 @end
 

@@ -25,13 +25,13 @@
                 "VersionNumber": "版本号:当前事件对应的版本号"
             },
             "aop-class": "TestViewController",
-            "aop-method": "viewDidLoad"
+            "aop-method": "viewDidAppear:"
         },
         {
             "eventId": "Register_Begin_Button",
             "eventName": "点击立",
             "aop-class": "TestViewController",
-            "aop-method": "viewDidLoad",
+            "aop-method": "login",
             "props": {
                 "Channel": "$channel",
                 "Equipment": "$Equipment",
@@ -40,6 +40,12 @@
             "desc": {
                 "remark": "渠道(Channel):微站、app标准版、app关怀版、非营销人员老带新、营销人员老带新、web端、柜面扫码;设备(Equipment):安卓(具体系统型号)、ios苹果(具体系统型号)、pc(具体系统型号)、平板(具体系统型号);版本号(VersionNumber):当前事件对应的版本号"
             }
+        },
+        {
+            "eventId": "Register_Begin_Button",
+            "eventName": "点击立",
+            "aop-class": "TestViewController",
+            "aop-method": "login:dict:"
         }
     ]
 }

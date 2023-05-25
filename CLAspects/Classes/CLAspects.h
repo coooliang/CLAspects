@@ -13,7 +13,7 @@
 
 + (CLAspects *)sharedInstance;
 
-- (void)aop:(CLAConfigOptions *)configOptions block:(void(^)(NSDictionary *result))block configBlock:(void(^)(NSString *html))configBlock;
+- (void)aop:(void(^)(NSDictionary *result))block configBlock:(void(^)(NSString *html))configBlock;
 
 @end
 

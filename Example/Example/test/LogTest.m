@@ -10,8 +10,8 @@
 
 @implementation LogTest
 
-+(void)md:(NSString *)key props:(NSDictionary *)props{
-    NSLog(@"LogTest key = %@ props = %@",key,props);
++ (void)md:(NSString *)key props:(NSDictionary *)props {
+    NSLog(@"LogTest key = %@ props = %@", key, props);
 }
 
 @end

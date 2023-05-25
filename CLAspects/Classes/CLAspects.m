@@ -6,16 +6,16 @@
 //  Copyright © 2018 yypt. All rights reserved.
 //
 
-#import "CLAspects.h"
 #import "Aspects.h"
-#import <WebKit/WebKit.h>
+#import "CLAspects.h"
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 @interface CLAWebViewController : UIViewController
-@property (nonatomic,strong)WKWebView *webView;
+@property(nonatomic, strong) WKWebView *webView;
 @end
 
-@interface CLAWebViewController()<WKNavigationDelegate>
+@interface CLAWebViewController () <WKNavigationDelegate>
 
 @end
 @implementation CLAWebViewController {
@@ -25,17 +25,17 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _webView = [[WKWebView alloc]initWithFrame:self.view.bounds];
+        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
         [self.view addSubview:_webView];
         _webView.navigationDelegate = self;
-        _activityView = [[UIActivityIndicatorView alloc]initWithFrame:_webView.bounds];
+        _activityView = [[UIActivityIndicatorView alloc] initWithFrame:_webView.bounds];
         [_webView addSubview:_activityView];
     }
     return self;
 }
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
-        [_activityView startAnimating];
+    [_activityView startAnimating];
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
@@ -46,21 +46,17 @@
     [_activityView stopAnimating];
 }
 
-
 @end
 
 typedef void (^ConfigBlock)(NSString *html);
 typedef void (^Callback)(NSDictionary *result);
-@implementation CLAspects{
-    CLAConfigOptions *_configOptions;
-    
+@implementation CLAspects {
     ConfigBlock _configBlock;
     Callback _block;
-    
     NSString *_html;
 }
 
-//单例
+// 单例
 static CLAspects *instance = nil;
 + (id)sharedInstance {
     static dispatch_once_t predicate;
@@ -71,23 +67,16 @@ static CLAspects *instance = nil;
 }
 
 #pragma mark - public methods
-- (void)aop:(CLAConfigOptions *)configOptions block:(void(^)(NSDictionary *result))block configBlock:(void(^)(NSString *html))configBlock {
-    if(configOptions == nil){
-        configOptions = [[CLAConfigOptions alloc]init];
-    }
-    if(configOptions.fileName == nil || [@"" isEqualToString:configOptions.fileName]){
-        configOptions.fileName = @"md.json";
-    }
-    _configOptions = configOptions;
-    _configBlock = configBlock;
+- (void)aop:(void (^)(NSDictionary *result))block configBlock:(void (^)(NSString *html))configBlock {
     _block = block;
-    NSData *data = [self loadConfigWithFileName:configOptions.fileName];
-    if(data){
+    _configBlock = configBlock;
+    NSData *data = [self loadConfigWithFileName:CLAConfigOptions.fileName];
+    if (data) {
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        if(dict && [dict isKindOfClass:[NSDictionary class]] && dict.count > 0){
+        if (dict && [dict isKindOfClass:[NSDictionary class]] && dict.count > 0) {
             NSArray *points = [dict objectForKey:@"points"];
             [self aspect:points];
-            if(configOptions.debug){
+            if (CLAConfigOptions.debug) {
                 [self printExampleJson];
             }
             [self printToHtml:points];
@@ -95,7 +84,7 @@ static CLAspects *instance = nil;
     }
 }
 
-#pragma mark - 
+#pragma mark -
 - (void)printExampleJson {
     NSString *mdJson = @"\n \
     {\n \
@@ -116,7 +105,7 @@ static CLAspects *instance = nil;
                 }\n \
             ]\n \
     }";
-    NSLog(@"Example for md.json : \n %@",mdJson);
+    NSLog(@"Example for md.json : \n %@", mdJson);
 }
 
 /*
@@ -137,25 +126,25 @@ static CLAspects *instance = nil;
    "aop-method": "viewDidLoad"
  }
  */
--(NSArray *)neatenArray:(NSArray *)array{
+- (NSArray *)neatenArray:(NSArray *)array {
     NSMutableArray *arr = [NSMutableArray arrayWithCapacity:array.count];
     for (NSDictionary *dict in array) {
         NSDictionary *propsDict = [dict objectForKey:@"props"];
         NSString *eventId = [dict objectForKey:@"eventId"];
         NSString *eventName = [dict objectForKey:@"eventName"];
         NSString *props = @"";
-        if(propsDict){
+        if (propsDict) {
             props = [propsDict.allKeys componentsJoinedByString:@","];
         }
         NSString *class = [dict objectForKey:@"aop-class"];
         NSString *method = [dict objectForKey:@"aop-method"];
-        [arr addObject:@[eventName,eventId,props,class,method]];
+        [arr addObject:@[eventName, eventId, props, class, method]];
     }
     return arr;
 }
 
--(void)printToHtml:(NSArray *)points{
-    if(_configBlock && points){
+- (void)printToHtml:(NSArray *)points {
+    if (_configBlock && points) {
         NSArray *array = [self neatenArray:points];
         NSMutableString *string = [NSMutableString stringWithCapacity:0];
         [string appendString:@"<!DOCTYPE html>"];
@@ -165,33 +154,33 @@ static CLAspects *instance = nil;
         [string appendString:@"<meta name=\"viewport\" content=\"width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no\"/>"];
         [string appendString:@"<style type=\"text/css\">.xwtable { width: 100%; border-collapse: collapse; border: 1px solid #ccc; } .xwtable thead td { font-size: 12px; color: #333333; text-align: center; border: 1px solid #ccc; font-weight: bold; } .xwtable tbody tr { background: #fff; font-size: 12px; color: #666666; } .xwtable tbody tr.alt-row { background: #f2f7fc; } .xwtable td { line-height: 20px; text-align: left; padding: 4px 10px 3px 10px; height: 18px; border: 1px solid #ccc; white-space: nowrap;}</style>"];
         [string appendString:@"</head>"];
-        
+
         [string appendString:@"<body>"];
-        
+
         [string appendString:@"<div style=\"text-align:center\"><h1>埋点表格</h1></div>"];
-        
+
         [string appendString:@"<table class=\"xwtable\">"];
-        
-        //eventName,eventId,props,class,method
+
+        // eventName,eventId,props,class,method
         [string appendString:@"<thead> <tr> <td>事件名称</td> <td>事件ID</td> <td>事件属性</td> <td>类名</td> <td>方法名</td> </tr> </thead>"];
-        
+
         [string appendString:@"<tbody>"];
 
         //
         for (NSArray *temp in array) {
-            [string appendString:[NSString stringWithFormat:@"<tr> <td>%@</td> <td>%@</td> <td>%@</td> <td>%@</td> <td>%@</td> </tr>",temp[0],temp[1],temp[2],temp[3],temp[4]]];
+            [string appendString:[NSString stringWithFormat:@"<tr> <td>%@</td> <td>%@</td> <td>%@</td> <td>%@</td> <td>%@</td> </tr>", temp[0], temp[1], temp[2], temp[3], temp[4]]];
         }
-        
+
         [string appendString:@"</tbody>"];
         [string appendString:@"</table>"];
         [string appendString:@"</body>"];
         [string appendString:@"</html>"];
         _configBlock(string);
-        
-        if(_configOptions.debug){
+
+        if (CLAConfigOptions.debug) {
             _html = string;
             UIColor *color = [self colorWithHexString:@"209cf0"];
-            UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(UIScreen.mainScreen.bounds.size.width-45, UIScreen.mainScreen.bounds.size.height-150, 35, 35)];
+            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(UIScreen.mainScreen.bounds.size.width - 45, UIScreen.mainScreen.bounds.size.height - 150, 35, 35)];
             [button setTitle:@"MD" forState:UIControlStateNormal];
             [button setTitleColor:color forState:UIControlStateNormal];
             button.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -205,14 +194,14 @@ static CLAspects *instance = nil;
     }
 }
 
-- (void)showWebVC{
-    CLAWebViewController *vc = [[CLAWebViewController alloc]init];
+- (void)showWebVC {
+    CLAWebViewController *vc = [[CLAWebViewController alloc] init];
     [vc.webView loadHTMLString:_html baseURL:nil];
     UINavigationController *navVC = (UINavigationController *)UIApplication.sharedApplication.keyWindow.rootViewController;
     [navVC pushViewController:vc animated:YES];
 }
 
-- (UIColor *)colorWithHexString:(NSString *)stringToConvert{
+- (UIColor *)colorWithHexString:(NSString *)stringToConvert {
     NSString *cString = [[stringToConvert stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     if ([cString length] < 6) return [UIColor blackColor];
     if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
@@ -229,12 +218,12 @@ static CLAspects *instance = nil;
     [[NSScanner scannerWithString:rString] scanHexInt:&r];
     [[NSScanner scannerWithString:gString] scanHexInt:&g];
     [[NSScanner scannerWithString:bString] scanHexInt:&b];
-    return [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f) blue:((float) b / 255.0f) alpha:1];
+    return [UIColor colorWithRed:((float)r / 255.0f) green:((float)g / 255.0f) blue:((float)b / 255.0f) alpha:1];
 }
 
 #pragma mark -
 - (void)aspect:(NSArray *)points {
-    if(points && [points isKindOfClass:[NSArray class]] && points.count > 0){
+    if (points && [points isKindOfClass:[NSArray class]] && points.count > 0) {
         for (NSDictionary *point in points) {
             NSString *className = [point objectForKey:@"aop-class"];
             NSString *method = [point objectForKey:@"aop-method"];
@@ -242,14 +231,14 @@ static CLAspects *instance = nil;
                 NSDictionary *props = [self transferProps:point[@"props"] target:aspectInfo.instance];
                 NSMutableDictionary *rs = [NSMutableDictionary dictionaryWithDictionary:point];
                 [rs setObject:props forKey:@"props"];
-                if(_block)_block(rs);
+                if (_block) _block(rs);
             }];
         }
     }
 }
 
 - (NSDictionary *)transferProps:(NSDictionary *)props target:(id)target {
-    if(props == nil)return @{};
+    if (props == nil) return @{};
     NSMutableDictionary *result = [NSMutableDictionary dictionaryWithCapacity:props.count];
     for (NSString *k in props.allKeys) {
         NSString *value = [props objectForKey:k];
@@ -263,7 +252,7 @@ static CLAspects *instance = nil;
                 [result setValue:temp forKey:k];
 #pragma clang diagnostic pop
             }
-        }else{
+        } else {
             NSString *value = [props objectForKey:k];
             [result setValue:value forKey:k];
         }
@@ -273,7 +262,7 @@ static CLAspects *instance = nil;
 
 #pragma mark - loadConfigWithFileName
 - (NSData *)loadConfigWithFileName:(NSString *)fileName {
-    NSString *path = [[NSBundle mainBundle]pathForResource:fileName ofType:nil];
+    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
     NSFileHandle *file = [NSFileHandle fileHandleForReadingAtPath:path];
     NSData *data = [file readDataToEndOfFile];
     [file closeFile];
@@ -281,19 +270,19 @@ static CLAspects *instance = nil;
 }
 
 #pragma mark - private aop methods
-- (void)after:(NSString *)className method:(NSString *)methodName callback:(void(^)(id<AspectInfo> aspectInfo))callBack {
+- (void)after:(NSString *)className method:(NSString *)methodName callback:(void (^)(id<AspectInfo> aspectInfo))callBack {
     [self class:className method:methodName options:AspectPositionAfter callback:callBack];
 }
 
-- (void)before:(NSString *)className method:(NSString *)methodName callback:(void(^)(id<AspectInfo> aspectInfo))callBack {
+- (void)before:(NSString *)className method:(NSString *)methodName callback:(void (^)(id<AspectInfo> aspectInfo))callBack {
     [self class:className method:methodName options:AspectPositionBefore callback:callBack];
 }
 
-- (void)class:(NSString *)className method:(NSString *)methodName options:(AspectOptions)options callback:(void(^)(id<AspectInfo>))callBack {
+- (void)class:(NSString *)className method:(NSString *)methodName options:(AspectOptions)options callback:(void (^)(id<AspectInfo>))callBack {
     Class class = NSClassFromString(className);
     SEL method = NSSelectorFromString(methodName);
     if (class && method) {
-        [class aspect_hookSelector:method withOptions:options usingBlock:^(id<AspectInfo> aspectInfo){
+        [class aspect_hookSelector:method withOptions:options usingBlock:^(id<AspectInfo> aspectInfo) {
             if (callBack) {
                 callBack(aspectInfo);
             }

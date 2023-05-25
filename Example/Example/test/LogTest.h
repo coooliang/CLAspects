@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LogTest : NSObject
 
-+(void)md:(NSString *)key props:(NSDictionary *)props;
++ (void)md:(NSString *)key props:(NSDictionary *)props;
 
 @end
 

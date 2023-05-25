@@ -27,25 +27,12 @@
 }
 
 - (void)md {
-    CLAConfigOptions *options = [[CLAConfigOptions alloc]init];
-    options.debug = YES;
-    [[CLAspects sharedInstance]aop:options block:^(NSDictionary *result) {
+    CLAConfigOptions.debug = YES;
+    [[CLAspects sharedInstance]aop:^(NSDictionary *result) {
         NSLog(@"result = %@",result);
     } configBlock:^(NSString *html) {
         NSLog(@"html = %@",html);
     }];
-}
-
-- (NSString *)stringByReplaceUnicode:(NSString *)printString {
-    NSMutableString *convertedString = [printString mutableCopy];
-    [convertedString replaceOccurrencesOfString:@"\\U"
-                                     withString:@"\\u"
-                                        options:0
-                                          range:NSMakeRange(0, convertedString.length)];
-    
-    CFStringRef transform = CFSTR("Any-Hex/Java");
-    CFStringTransform((__bridge CFMutableStringRef)convertedString, NULL, transform, YES);
-    return convertedString;
 }
 
 @end

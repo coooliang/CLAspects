@@ -19,6 +19,7 @@
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 40)];
     [button setTitle:@"click" forState:UIControlStateNormal];
     [button setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont boldSystemFontOfSize:20];
     [self.view addSubview:button];
     [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
 }

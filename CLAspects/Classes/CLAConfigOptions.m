@@ -6,14 +6,23 @@
 
 #import "CLAConfigOptions.h"
 
+static NSString *kCLAFileName = @"md.json";
+static BOOL kCLADebug = NO;
+
 @implementation CLAConfigOptions
 
-- (instancetype)initWithFileName:(NSString *)fileName {
-    self = [super init];
-    if (self) {
-        _fileName = fileName;
-    }
-    return self;
++ (NSString *)fileName {
+    return kCLAFileName;
+}
++ (void)setFileName:(NSString *)fileName{
+    kCLAFileName = fileName;
+}
+
++ (BOOL)debug{
+    return kCLADebug;
+}
++ (void)setDebug:(BOOL)debug{
+    kCLADebug = debug;
 }
 
 @end
