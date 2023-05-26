@@ -152,18 +152,20 @@ static CLAspects *instance = nil;
         [string appendString:@"<head>"];
         [string appendString:@"<meta charset='utf-8' />"];
         [string appendString:@"<meta name=\"viewport\" content=\"width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no\"/>"];
-        [string appendString:@"<style type=\"text/css\">.xwtable { width: 100%; border-collapse: collapse; border: 1px solid #ccc; } .xwtable thead td { font-size: 12px; color: #333333; text-align: center; border: 1px solid #ccc; font-weight: bold; } .xwtable tbody tr { background: #fff; font-size: 12px; color: #666666; } .xwtable tbody tr.alt-row { background: #f2f7fc; } .xwtable td { line-height: 20px; text-align: left; padding: 4px 10px 3px 10px; height: 18px; border: 1px solid #ccc; white-space: nowrap;}</style>"];
+        [string appendString:@"<style type=\"text/css\">"];
+        [string appendString:@".xwtable { width: 800px; border-collapse: collapse; border: 1px solid #ccc; }"];
+        [string appendString:@".xwtable thead td {font-size: 12px; color: #333333; text-align: center; border: 1px solid #ccc; font-weight: bold; }"];
+        [string appendString:@".xwtable tbody tr { background: #fff; font-size: 12px; color: #666666; }"];
+        [string appendString:@".xwtable tbody tr.alt-row { background: #f2f7fc; }"];
+        [string appendString:@".xwtable td { word-break:break-word;max-width:150px;line-height: 20px; text-align: left; padding: 4px 10px 3px 10px; height: 18px; border: 1px solid #ccc;}"];
+        [string appendString:@"</style>"];
         [string appendString:@"</head>"];
-
         [string appendString:@"<body>"];
-
         [string appendString:@"<div style=\"text-align:center\"><h1>埋点表格</h1></div>"];
-
         [string appendString:@"<table class=\"xwtable\">"];
 
         // eventName,eventId,props,class,method
         [string appendString:@"<thead> <tr> <td>事件名称</td> <td>事件ID</td> <td>事件属性</td> <td>类名</td> <td>方法名</td> </tr> </thead>"];
-
         [string appendString:@"<tbody>"];
 
         //

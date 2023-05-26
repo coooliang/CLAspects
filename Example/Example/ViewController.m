@@ -23,10 +23,10 @@
     [self.view addSubview:button];
     [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
     
-    [self vc1];
+    [self click];
 }
 
--(void)vc1{
+-(void)click{
     
 }
 
