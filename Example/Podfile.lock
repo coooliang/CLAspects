@@ -1,7 +1,13 @@
 PODS:
   - Aspects (1.4.1)
   - CLAspects (0.1.0):
-    - Aspects
+    - Aspects (= 1.4.1)
+    - XlsxReaderWriter (= 1.0.11)
+  - SSZipArchive (0.4.0)
+  - XlsxReaderWriter (1.0.11):
+    - SSZipArchive (~> 0.4)
+    - XMLDictionary (~> 1.4)
+  - XMLDictionary (1.4.1)
 
 DEPENDENCIES:
   - CLAspects (from `/Users/lion/CLAspects`)
@@ -9,6 +15,9 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Aspects
+    - SSZipArchive
+    - XlsxReaderWriter
+    - XMLDictionary
 
 EXTERNAL SOURCES:
   CLAspects:
@@ -16,7 +25,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  CLAspects: 588b9294b54666446cf348f1ad3a9622ad66a1d8
+  CLAspects: 634cb21862f6d23fb0748622b805922fdc767e4e
+  SSZipArchive: d3d66fc0e3fb6ac0f723d95481aae71aae916cc3
+  XlsxReaderWriter: 7e4c5c9fb7c4e78e4edc89fa11f50c086540277c
+  XMLDictionary: fa07b6ff422b3a91d47a5de9bc82e3fc04fbd167
 
 PODFILE CHECKSUM: 9cf1e05a4b9b13b1dbf403d0f523ceca4db3b218
 

@@ -10,6 +10,7 @@
 #import "CLAspects.h"
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
+#import "BRAOfficeDocumentPackage.h"
 
 @interface CLAWebViewController : UIViewController
 @property(nonatomic, strong) WKWebView *webView;
@@ -70,17 +71,13 @@ static CLAspects *instance = nil;
 - (void)aop:(void (^)(NSDictionary *result))block configBlock:(void (^)(NSString *html))configBlock {
     _block = block;
     _configBlock = configBlock;
-    NSData *data = [self loadConfigWithFileName:CLAConfigOptions.fileName];
-    if (data) {
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        if (dict && [dict isKindOfClass:[NSDictionary class]] && dict.count > 0) {
-            NSArray *points = [dict objectForKey:@"points"];
-            [self aspect:points];
-            if (CLAConfigOptions.debug) {
-                [self printExampleJson];
-            }
-            [self printToHtml:points];
+    NSArray *points = [self loadConfigWithFileName];
+    if (points) {
+        [self aspect:points];
+        if (CLAConfigOptions.debug) {
+            [self printExampleJson];
         }
+        [self printToHtml:points];
     }
 }
 
@@ -97,8 +94,8 @@ static CLAspects *instance = nil;
                         \"Equipment\": \"$Equipment\",\n \
                         \"VersionNumber\": \"4.5.3\"\n \
                     },\n \
-                    \"aop-class\": \"TestViewController\",\n \
-                    \"aop-method\": \"viewDidLoad\"\n \
+                    \"className\": \"TestViewController\",\n \
+                    \"methodName\": \"viewDidLoad\"\n \
                     \"desc\": {\n \
                         \"remark\": \"渠道(Channel):微站、app标准版...\",\n \
                     },\n \
@@ -132,12 +129,9 @@ static CLAspects *instance = nil;
         NSDictionary *propsDict = [dict objectForKey:@"props"];
         NSString *eventId = [dict objectForKey:@"eventId"];
         NSString *eventName = [dict objectForKey:@"eventName"];
-        NSString *props = @"";
-        if (propsDict) {
-            props = [propsDict.allKeys componentsJoinedByString:@","];
-        }
-        NSString *class = [dict objectForKey:@"aop-class"];
-        NSString *method = [dict objectForKey:@"aop-method"];
+        NSString *props = [dict objectForKey:@"props"];
+        NSString *class = [dict objectForKey:@"className"];
+        NSString *method = [dict objectForKey:@"methodName"];
         [arr addObject:@[eventName, eventId, props, class, method]];
     }
     return arr;
@@ -227,8 +221,8 @@ static CLAspects *instance = nil;
 - (void)aspect:(NSArray *)points {
     if (points && [points isKindOfClass:[NSArray class]] && points.count > 0) {
         for (NSDictionary *point in points) {
-            NSString *className = [point objectForKey:@"aop-class"];
-            NSString *method = [point objectForKey:@"aop-method"];
+            NSString *className = [point objectForKey:@"className"];
+            NSString *method = [point objectForKey:@"methodName"];
             [self after:className method:method callback:^(id<AspectInfo> aspectInfo) {
                 NSDictionary *props = [self transferProps:point[@"props"] target:aspectInfo.instance];
                 NSMutableDictionary *rs = [NSMutableDictionary dictionaryWithDictionary:point];
@@ -263,13 +257,51 @@ static CLAspects *instance = nil;
 }
 
 #pragma mark - loadConfigWithFileName
-- (NSData *)loadConfigWithFileName:(NSString *)fileName {
-    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
-    NSFileHandle *file = [NSFileHandle fileHandleForReadingAtPath:path];
-    NSData *data = [file readDataToEndOfFile];
-    [file closeFile];
-    return data;
+- (NSArray *)loadConfigWithFileName {
+    NSString *documentPath = [[NSBundle mainBundle] pathForResource:CLAConfigOptions.fileName ofType:@"xlsx"];
+    BRAOfficeDocumentPackage *spreadsheet = [BRAOfficeDocumentPackage open:documentPath];
+    BRAWorksheet *worksheet = spreadsheet.workbook.worksheets.firstObject;
+    NSArray<BRARow *> *rows = worksheet.rows;
+    
+    NSArray *fieldNameArray = @[@"eventId",@"eventName",@"className",@"methodName",@"props",@"desc"];//fieldNameArray
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:0];
+    for (int i=1; i<rows.count; i++) {
+        BRARow *row = rows[i];
+        NSMutableDictionary *rowDict = [NSMutableDictionary dictionaryWithCapacity:0];
+        for(int j=0;(j<fieldNameArray.count);j++){
+            NSString *fieldName = fieldNameArray[j];
+            if(j >= row.cells.count){
+                [rowDict setObject:@"" forKey:fieldName];
+            }else{
+                BRACell *cell = row.cells[j];
+                if([@"props" isEqualToString:fieldName]){
+                    NSDictionary *props = [self objectFromJSONString:cell.stringValue];
+                    if(props && [props isKindOfClass:[NSDictionary class]]){
+                        NSDictionary *dict = @{fieldName : props};
+                        [rowDict setObject:dict forKey:fieldName];
+                    }
+                }else{
+                    [rowDict setObject:cell.stringValue forKey:fieldName];
+                }
+            }
+        }
+        [result addObject:rowDict];
+    }
+    NSLog(@"result = %@",result);
+    return result;
 }
+
+- (NSDictionary *)objectFromJSONString:(NSString *)json{
+    NSString *string = [json stringByReplacingOccurrencesOfString:@"'" withString:@"\""];
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    if(data && [data isKindOfClass:[NSData class]] && data.length > 0){
+        NSError *error = nil;
+        id result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        return result;
+    }
+    return nil;
+}
+
 
 #pragma mark - private aop methods
 - (void)after:(NSString *)className method:(NSString *)methodName callback:(void (^)(id<AspectInfo> aspectInfo))callBack {

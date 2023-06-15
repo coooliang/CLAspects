@@ -6,7 +6,7 @@
 
 #import "CLAConfigOptions.h"
 
-static NSString *kCLAFileName = @"md.json";
+static NSString *kCLAFileName = @"MD";
 static BOOL kCLADebug = NO;
 
 @implementation CLAConfigOptions

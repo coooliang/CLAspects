@@ -7,72 +7,316 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1522CD935DCA2963232BDEB62E92A973 /* CLAConfigOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3EF77756F29765A044E52863399BB3 /* CLAConfigOptions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1883F4385169E8220A23A3B095BE1884 /* CLAConfigOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F16B7B9005A2D4727567DA024DB37E7 /* CLAConfigOptions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		22F0A4C90C10F9DB15F6F94A33614777 /* Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = 325E1DE4DCB4C534D06ABCD63E2F8B15 /* Aspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4B6A566087E1058A1B568AB577473A17 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BFEF1DDF3D2D328528F7A565F5177D /* Pods-Example-dummy.m */; };
-		4E12BC1E33C94AD0FEB28EFC78FAC189 /* CLAspects.h in Headers */ = {isa = PBXBuildFile; fileRef = FD4B31928228BB391B97CBC13FDE59C4 /* CLAspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7CF1484AA5CC1843AE45C4CA0C0D1142 /* CLAspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 255787E785DE310D89314A3888B13F8E /* CLAspects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7F63909F08B4B6E09A847845F8696F29 /* CLAspects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3210140DF521EB785C7E7F488FD97D /* CLAspects-dummy.m */; };
-		828AD7256969091B99E519892452B59F /* Aspects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 294023A17A64B93731AC48F5311B08E1 /* Aspects-dummy.m */; };
-		EF8A78801B03811A3553B31E21154729 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E78E83656B249A2C505F8BD77F4D6 /* Aspects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0C427EB3C41F94C5EC3D20D9B2937650 /* BRASheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 806741C2A33D312DA0C292A8CA9AE7B0 /* BRASheet.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0C69B70EB1FEB6A463849ACE9743CE90 /* NSDictionary+DeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = E163FD6E2369B8DD45DA07AB274B025E /* NSDictionary+DeepCopy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0FCC19E386307B7CE32ADD684E875B69 /* UIColor+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = C93929B919B8AE85166CCEA2A4E0DD5A /* UIColor+HTML.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		119456060384A4763D1CFB7ADC5DD983 /* BRAMergeCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 26A36BEED1257654D3CC1E3039372273 /* BRAMergeCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		12A6A6CFBF3321A479C9FAF86236AB62 /* BRAVmlDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF2D4E0BBEE9C84FB31CDD9E337BDAF /* BRAVmlDrawing.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1401D185D51FA8D87EB7FCFA0D328FD2 /* BRACalcChain.h in Headers */ = {isa = PBXBuildFile; fileRef = CDAFFE2D325BDCCDC564AE278F927CFC /* BRACalcChain.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		15A78118BD301630912124541D68370A /* BRAStyles.h in Headers */ = {isa = PBXBuildFile; fileRef = 48977FF4C70C18BBEC2D03F87C37CCF3 /* BRAStyles.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		165BB965C8080C2EF5F7B49674EEE853 /* BRACellRange.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A78C42F86268D15C4E5316FF4E5E55 /* BRACellRange.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		18212442C70CD7141B7115B9087A73F9 /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF8A4342CC27945F4ABA6892B51F83A /* mztools.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1A217EE137FB94118050C18EE02418EB /* UIColor+OpenXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A46C0B8E691F9812260F4501027FA34 /* UIColor+OpenXML.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1A2BB669597CF315FC63305CC1E987C9 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = FC12EC429ADD6DA8558AC70BA3E06F6E /* mztools.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1BC61FD0FC7205914DCDD50D10209C4C /* BRAComments.h in Headers */ = {isa = PBXBuildFile; fileRef = 950A97D131C9DF23196B7DDCE69FB8AD /* BRAComments.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1F7CDFDEE68B3F16DF93615A57104B0A /* XMLDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 940DB0FA83AE774273C4B301DDADB8AD /* XMLDictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		20217ECB95EA8390C7134F2DC102752C /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9398E1AF3F385BC0CD073CB763418E /* Common.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		22BDD2E718A36CEFCC1916FAB904CA42 /* BRAOpenXmlSubElement.h in Headers */ = {isa = PBXBuildFile; fileRef = B95B3F9602E89B0E0CB7DA22603DE484 /* BRAOpenXmlSubElement.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		22F0A4C90C10F9DB15F6F94A33614777 /* Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = 29689CF603D53D670F477B1C36841F62 /* Aspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		23EAE69FDA063B29A9B03F48ADDC08B1 /* BRASharedStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7186B3448A869C45CA6EBE6CE4EA3D /* BRASharedStrings.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2803828B08399CCDDCF809C6A9F9D9E3 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCC49D20757C2CEC13AF233AB2BFC38 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		28E3FC123371D25E5200F6D5E08D8F06 /* BRASharedString.h in Headers */ = {isa = PBXBuildFile; fileRef = FC68306847A4A3B1E0C923997238BFC7 /* BRASharedString.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		29D835BB619BBC8D29F1224018DB5F00 /* BRARelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 235869680D17A50E8C05DF1EA3C1F1C2 /* BRARelationship.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2AFF880F1BCDE168DE3083F5288D7228 /* BRATheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EEE475C9ADF9FAB764EE3CE0DEA8730 /* BRATheme.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		32333D3690AFC48B5F68448FAC9CB622 /* XlsxReaderWriter-swift-bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 96C2709DE6C76EAC15085A1482278C58 /* XlsxReaderWriter-swift-bridge.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3312A620D4C54D399423E691EF40C8A4 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = CC5AD7CE56E2EC16FC24B7C26CD3122B /* ioapi.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		336FEDC515FD00D45131C31F8D743F32 /* BRARow.h in Headers */ = {isa = PBXBuildFile; fileRef = D555C8892CB044411200F78619F41689 /* BRARow.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		34ABC2AF9FB46052C7496AA1AD12DCB2 /* BRAMergeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AFA96102FA7D1E6030C1C4B95C27CB /* BRAMergeCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3E6B12289C35A8CE897542A7D82BB1F6 /* BRACell.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D02DC507C7FB896C2BE672D234E5A0 /* BRACell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3FDAAB58650886774BEDA38423D5D935 /* BRANumberFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B0E0CA02C0BB129F338E38EAFA6E1 /* BRANumberFormat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		429B8C2EA0DA1BFD6088583B1829139B /* BRAComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CABD7C7349C04D8F812463F963D4AF4 /* BRAComment.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		441AC6008A715D8A9E065AF0D3573366 /* BRAWorksheetDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B8429D3E8D32C38A2546A5714BAA116 /* BRAWorksheetDrawing.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4BBA729884B45B189AD85D8FE53B3178 /* UIColor+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F5880BB79B084F1CAB519A58A4E352D2 /* UIColor+HTML.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4D753DFDC957CD1DA80AD9EBDE1990A9 /* BRASharedStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 923506369FAFAF46848158FEB73D88D0 /* BRASharedStrings.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4DEBFBB0228C9A18CDE47F426A61B50F /* BRAImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC29DDDA98BD9CFBD750476369C4ACD /* BRAImage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4EB8949AD7BB4A35249F94287F608F54 /* BRADrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7F8E275F51C6C48647E8AA2140FE5F /* BRADrawing.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		50685365EEA763145A2310CA9EFA59C7 /* BRAOpenXmlSubElement.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFE1382784574EBB6E10B726900CDD8 /* BRAOpenXmlSubElement.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		507EB916D55736383CE40FE16374D5D0 /* BRAContentTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E51D8BDD56D68062E646EB587356B3C /* BRAContentTypes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		538966BAA891209A5C2AD2D246A20238 /* CLAspects.h in Headers */ = {isa = PBXBuildFile; fileRef = FD4B31928228BB391B97CBC13FDE59C4 /* CLAspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5448012DBDA0027E95C7C5D9463EDF03 /* UIFont+BoldItalic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A10D4544B702759C9249DECF7223146 /* UIFont+BoldItalic.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		558056704174AB897D07BB447320C969 /* BRAColumn.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E59AFDEFEEE11A76CC45239CAB034E /* BRAColumn.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		55E429F27F605DB019FC142D30A60C2F /* BRASharedString.m in Sources */ = {isa = PBXBuildFile; fileRef = EF02F9780BA7494F62E32943BBDAE2D5 /* BRASharedString.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		57FFF5218292989AC483C0353C8465FA /* BRAElementWithRelationships.h in Headers */ = {isa = PBXBuildFile; fileRef = 354F6A27B1640EE3839733793AA37302 /* BRAElementWithRelationships.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5998F991FED7B6164CC553BE79B581DE /* CLAspects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3210140DF521EB785C7E7F488FD97D /* CLAspects-dummy.m */; };
+		5B1C9CABC362FA3D12BE81E27571CFC1 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3BB86A15F2493F8769DDBFF777E140 /* zip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5B5EE298048A763BA388C108FB18375A /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0FC8BA7BFE807F1374ED306A8CD8CD /* XMLDictionary.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5D361B8648ACD723653EEA0691A773B1 /* XlsxReaderWriter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E7937B536F3C49E42D7C7FD029297 /* XlsxReaderWriter-dummy.m */; };
+		5F2272745D7BEDDBBAF3C958C47BE619 /* NSDictionary+OpenXMLDictionaryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CCEB7CF9A556ED801D229914581ED /* NSDictionary+OpenXMLDictionaryParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6239114943EBC3B0591A76690657432D /* BRAStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EABE3701957A140752798E2862641 /* BRAStyles.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		653CF335F4EFF870BC374D3C7EC9CD25 /* BRAWorksheetDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 41013C32537EC6DF04D421EC1515CE6D /* BRAWorksheetDrawing.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		659B82C0235258BEE7FCFE50780641B8 /* NSDictionary+DeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 929162A5571885A14E18CD80EBA004D6 /* NSDictionary+DeepCopy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		693113D3F805FF937721D24AE30B0D90 /* BRACellFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = DC303214CD8906B74936AF6BDC6BD226 /* BRACellFormat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		69FBEE774E5C5C53C5303AC6962F31AC /* BRAOfficeDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DA7598E1A27651C1ED0E63D0DE2CA2 /* BRAOfficeDocument.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		73932C7DD499F1A0BBE2203D99115066 /* BRASheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E85950129B4CEA979F71493F87CEFEB /* BRASheet.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7447C4C1854CB4FC6009BA14042B1498 /* BRAOfficeDocumentPackage.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6435F462B4FE77D981E98B568A7258 /* BRAOfficeDocumentPackage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		76C532D323BB1A24A9C8471001FFD90F /* BRAWorksheet.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE5E9844A1A1E30CB52DBC5F2ACC5C4 /* BRAWorksheet.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		788A82E927E7AB9C2547F721FF10ED8C /* BRACellRange.h in Headers */ = {isa = PBXBuildFile; fileRef = C0897D3F7A3C0CCF416E2E027555F055 /* BRACellRange.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		79BD610F1A1CE377F50F297A0EEFCFBF /* BRARelationship.h in Headers */ = {isa = PBXBuildFile; fileRef = A8A8B7FA00B8E4E17324CB33D85A672D /* BRARelationship.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7AD913531CCDCBEEA62693D2AAAF5FE2 /* BRAImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E415CCDAAE76EC3CB2EE91827487E07 /* BRAImage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F27B98366A11EE0954D471D614FEA4D /* BRAOpenXmlElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 77DFAFCB110B6FD2613DBBD0E7C6A4C8 /* BRAOpenXmlElement.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8126FA312EE76E20C5E21775E87D1172 /* UIFont+BoldItalic.h in Headers */ = {isa = PBXBuildFile; fileRef = 13707221347E7B3A228C15F58A5066F4 /* UIFont+BoldItalic.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		828AD7256969091B99E519892452B59F /* Aspects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46517CFEA4C81754CCCF8855D35F303E /* Aspects-dummy.m */; };
+		831F5D097F6303EF73CEFD10F608636D /* BRAColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = E64629DBF98015EFFF618106C3561A9A /* BRAColumn.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8B14485F44B39C5ABE6042B85D0145B1 /* BRAContentTypesDefaultExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE6613C174463FE5ED02BBF3C0F7E3C /* BRAContentTypesDefaultExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		94457736ACBD84171A77DE5696C00E48 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 89492A6CD9B608030184976BCC46D7AC /* SSZipArchive.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A18D3FD5EAF7F53D20FB60F0E5D9BFC4 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BFEF1DDF3D2D328528F7A565F5177D /* Pods-Example-dummy.m */; };
+		A356DE5E018ED4C1D83862A6E78A8B5F /* BRADrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CB49312F991551573702716630F057 /* BRADrawing.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A94CA6FAA04AF69A47F87414403C6020 /* NSDictionary+OpenXMLDictionaryParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 749A2B5F6D64CAB4733CDC77DEA63163 /* NSDictionary+OpenXMLDictionaryParser.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AB16B53B19E25A10E56C398B0FA3C05E /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 472D0EFA4B2F325B93AD0D79290D0E47 /* SSZipArchive-dummy.m */; };
+		AB3F9B73663EA11ED44546D4C5DC022D /* BRARelationships.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D2E70670B4DBA65432E6CD1AD5CA20 /* BRARelationships.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AC4EA97AC9E824275004E460CC29642E /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 505419DAB7CB8F9646C46B51051636D4 /* unzip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ADAB41DDDBB95EC203814CB0BFB25BFB /* NSDictionary+OpenXmlString.m in Sources */ = {isa = PBXBuildFile; fileRef = BE364EC8F43C7DD689E9E7217AAC94CD /* NSDictionary+OpenXmlString.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AF65F527F64651A8669ECE7DA3F744B8 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = C7829EFB7116351945E8C63612309A13 /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B09DE9AFC23F99DA8D758821CE31835B /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = A17B060A9B3516017021FE20D9C86114 /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B204FE2C26ED48746103C2FF3439FCE5 /* BRACellFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = AB457069B3394A7F973402963358B195 /* BRACellFormat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B6BC63EF049B6161F16062044E88801E /* BRARelationships.h in Headers */ = {isa = PBXBuildFile; fileRef = DBE18D8BC0E5397338E75D826E208DE7 /* BRARelationships.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B89DD8416843504E3584139D6234A869 /* BRACalcChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 909F03D9B9CD05E2E431606F0400150C /* BRACalcChain.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BA8A07609602C62E0C9676DFBA340198 /* CLAConfigOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F16B7B9005A2D4727567DA024DB37E7 /* CLAConfigOptions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BB301AB94324EA18C25B06F1F1A44EDD /* XMLDictionary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B32B70C9EAA6B856C3DCB3231E5DDC /* XMLDictionary-dummy.m */; };
+		BFA0DED1E749AC73E2DACC3C87B7CE09 /* BRAContentTypesOverride.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4321F1E7180DE0BDF3DFE43598637F /* BRAContentTypesOverride.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C04227EABAB500D304FBDE727A19ABD8 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 421E095F9766A7C7F10E8D4C08FA2E3C /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C201E49B43E0DDA3F61F5B968C7A01C4 /* BRAContentTypesOverride.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CAF20C92C4073A7E25FEC51A64582A /* BRAContentTypesOverride.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C6346EF9A1EB84C1F7988EB4D8C6DF30 /* UIColor+OpenXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 84351AA7A2D47EE45D7DB32ABCCC6723 /* UIColor+OpenXML.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CDD5CCCDFB4DBDC7F41EB1CB2817618A /* BRAElementWithRelationships.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A43C42625DE9E3CEE1746A5181B65CB /* BRAElementWithRelationships.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D1ED6DA0C7577EF19F5DB0F746942C63 /* BRAVmlDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = FE1755CEAECBDD439B0912092B219284 /* BRAVmlDrawing.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D31DE0E8880FBE2A8D92A786D43E5206 /* BRAOfficeDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = C54E5E9EA053988DF825E35E7815B4BA /* BRAOfficeDocument.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D4018D06EE5BAA468EE4422CCEEE7D4A /* BRAOfficeDocumentPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = B50952D34A20C298930A1C020820BBBE /* BRAOfficeDocumentPackage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D46AF5DC4A9F122756B78BAB4C1A0A4B /* BRACalcChainCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DD0418F35AE07EF2DDB3A923B0EBE1 /* BRACalcChainCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D4CF4E2781279E7844872DA5F02A2C4A /* CLAspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 255787E785DE310D89314A3888B13F8E /* CLAspects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D4D4511640EDBFF65BAA368B20F47620 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDC061682AE5340E022AFF34EDDDFFF /* SSZipArchive.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D52152E37CBEDB8BF6225F3CFE37E986 /* BRACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2109D947C6EDF3CB68B636DE4654D2C8 /* BRACell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D9C3E1113829C2C5EBF9F450A6A6E486 /* BRAContentTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F5F9178F70A21118883BCA566AC0C5 /* BRAContentTypes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DD49F72B288EF192B9BE5084B486ADA0 /* BRACellFill.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F8EE22D2471D5DA38CBA5F668E1CA10 /* BRACellFill.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E2E42ADCF40BD51C43E1A28CE679F268 /* BRACellFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C2FBEA94EB30538016E3D0BE43A4B0 /* BRACellFill.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E49F30B098D58270E0F88436321ABF14 /* BRAComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 359E4A4C4B711213A3D1DCEA4713F94D /* BRAComments.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E8637810BD95307DCA3FA1EAC1F25CE3 /* BRACalcChainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A90A94C33030814C446697076D02A239 /* BRACalcChainCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E976F49AD661D927C56E3282EA3EF1E0 /* CLAConfigOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3EF77756F29765A044E52863399BB3 /* CLAConfigOptions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E9CE8A03B1B66978A81447D40732F9DB /* BRAWorksheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDA256660CDD9CEA9E3D5B3EB0DB85D /* BRAWorksheet.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EBF2803206C6FAA206FC64A6B6253C39 /* BRATheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 7500AE016B192A11943C2CDD1D2A5EC8 /* BRATheme.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EF061E986FB8DD2FC336B52BFA78A14D /* BRANumberFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B59D46F1A776E0C0834E880F574521 /* BRANumberFormat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EF52BE5010E77981FC37A5498189F191 /* BRAOpenXmlElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CAADBC6E85C5B7DC23ADBF5541F0759E /* BRAOpenXmlElement.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EF8A78801B03811A3553B31E21154729 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3EBDF5E5DDF73830387999BDC33B9 /* Aspects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F2DBF024B8DAA1D399A4A67F1D355C35 /* BRAContentTypesDefaultExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 940C8A2300834D8D346202BF2D2F7B63 /* BRAContentTypesDefaultExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F3B894884AA63D96D4074BC3863EA0B1 /* NSDictionary+OpenXmlString.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B2A07BFB9463DE1346CA3284173A99C /* NSDictionary+OpenXmlString.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F77F45152270D302FE3D8B569906A700 /* BRAComment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E0A253A9C9AC18392FA549F4DC0040E /* BRAComment.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F84CF940579597DDCAD72DCE86249E26 /* BRARelatedToColumnAndRowProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D5442095D7383559773F2575EF77833A /* BRARelatedToColumnAndRowProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F85DD5C89ECC94B424F45F238C4CF5D8 /* BRARow.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8721C49D4A0A4910D8DFB5E68D89B4 /* BRARow.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BD5F6842E2CFF0CE6E7BBE431AC4E3BC /* PBXContainerItemProxy */ = {
+		161076F750F05BB6D7EA57E22C92A430 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C6539905C4D50932B36244650B93C79B;
-			remoteInfo = Aspects;
+			remoteGlobalIDString = AF717B65664D59F1F03B1F2B6929C233;
+			remoteInfo = XlsxReaderWriter;
 		};
-		E27A34C632CB509C56B0EE4423ACE3DA /* PBXContainerItemProxy */ = {
+		3877ED80BC1A19BFCDE0E172BFA52EE8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C6539905C4D50932B36244650B93C79B;
-			remoteInfo = Aspects;
+			remoteGlobalIDString = 9137C1635807AFB96F5BB125784CCF06;
+			remoteInfo = XMLDictionary;
 		};
-		FF675F6F295D5DB4F595189CFCCA76ED /* PBXContainerItemProxy */ = {
+		65EF5BC07BC7528B40B098789F096F9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A59CD135374A833F453EE431100C569A;
 			remoteInfo = CLAspects;
 		};
+		6F6D9CC9CF6BFC045DE553872FDB5A96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60E38364AFF5E1349FF07415B944396;
+			remoteInfo = SSZipArchive;
+		};
+		95428F41953881E1E5248C7B419EEC78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6539905C4D50932B36244650B93C79B;
+			remoteInfo = Aspects;
+		};
+		9A00561E20EB8CEF65176E9143937AAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60E38364AFF5E1349FF07415B944396;
+			remoteInfo = SSZipArchive;
+		};
+		AB5BC76BFFC2DDFB5EC9C886EE829594 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9137C1635807AFB96F5BB125784CCF06;
+			remoteInfo = XMLDictionary;
+		};
+		CEBC7809B8ACD73C3DA06BC4AFFA8943 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF717B65664D59F1F03B1F2B6929C233;
+			remoteInfo = XlsxReaderWriter;
+		};
+		E0A637C1188D5E16442911F0838EB090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6539905C4D50932B36244650B93C79B;
+			remoteInfo = Aspects;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03CB49312F991551573702716630F057 /* BRADrawing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRADrawing.m; path = XlsxReaderWriter/BRADrawing.m; sourceTree = "<group>"; };
+		04CAF20C92C4073A7E25FEC51A64582A /* BRAContentTypesOverride.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAContentTypesOverride.h; path = XlsxReaderWriter/BRAContentTypesOverride.h; sourceTree = "<group>"; };
+		07C2FBEA94EB30538016E3D0BE43A4B0 /* BRACellFill.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACellFill.m; path = XlsxReaderWriter/BRACellFill.m; sourceTree = "<group>"; };
 		0B66DA72224BEFB1BE416FE6C16954D7 /* CLAspects */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = CLAspects; path = libCLAspects.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BF8A4342CC27945F4ABA6892B51F83A /* mztools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mztools.h; path = SSZipArchive/minizip/mztools.h; sourceTree = "<group>"; };
+		13707221347E7B3A228C15F58A5066F4 /* UIFont+BoldItalic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+BoldItalic.h"; path = "XlsxReaderWriter/UIFont+BoldItalic.h"; sourceTree = "<group>"; };
+		1B2A07BFB9463DE1346CA3284173A99C /* NSDictionary+OpenXmlString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+OpenXmlString.h"; path = "XlsxReaderWriter/NSDictionary+OpenXmlString.h"; sourceTree = "<group>"; };
+		1BA7F2D59B4817DBDCA632A7873D9C55 /* Aspects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Aspects.release.xcconfig; sourceTree = "<group>"; };
+		1E0A253A9C9AC18392FA549F4DC0040E /* BRAComment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAComment.h; path = XlsxReaderWriter/BRAComment.h; sourceTree = "<group>"; };
+		1E51D8BDD56D68062E646EB587356B3C /* BRAContentTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAContentTypes.h; path = XlsxReaderWriter/BRAContentTypes.h; sourceTree = "<group>"; };
 		1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-Example"; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2109D947C6EDF3CB68B636DE4654D2C8 /* BRACell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACell.m; path = XlsxReaderWriter/BRACell.m; sourceTree = "<group>"; };
+		235869680D17A50E8C05DF1EA3C1F1C2 /* BRARelationship.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRARelationship.m; path = XlsxReaderWriter/BRARelationship.m; sourceTree = "<group>"; };
 		23A3C2C1401DF06B6374C2FEB142F84A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		255787E785DE310D89314A3888B13F8E /* CLAspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLAspects.m; path = CLAspects/Classes/CLAspects.m; sourceTree = "<group>"; };
-		294023A17A64B93731AC48F5311B08E1 /* Aspects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Aspects-dummy.m"; sourceTree = "<group>"; };
+		26A36BEED1257654D3CC1E3039372273 /* BRAMergeCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAMergeCell.h; path = XlsxReaderWriter/BRAMergeCell.h; sourceTree = "<group>"; };
+		29689CF603D53D670F477B1C36841F62 /* Aspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		2B3EABE3701957A140752798E2862641 /* BRAStyles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAStyles.m; path = XlsxReaderWriter/BRAStyles.m; sourceTree = "<group>"; };
+		2D7F8E275F51C6C48647E8AA2140FE5F /* BRADrawing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRADrawing.h; path = XlsxReaderWriter/BRADrawing.h; sourceTree = "<group>"; };
 		2F16B7B9005A2D4727567DA024DB37E7 /* CLAConfigOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLAConfigOptions.h; path = CLAspects/Classes/CLAConfigOptions.h; sourceTree = "<group>"; };
-		325E1DE4DCB4C534D06ABCD63E2F8B15 /* Aspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		354F6A27B1640EE3839733793AA37302 /* BRAElementWithRelationships.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAElementWithRelationships.h; path = XlsxReaderWriter/BRAElementWithRelationships.h; sourceTree = "<group>"; };
 		357D2DB6E0666AB0C7275BFF8A9C9B4B /* CLAspects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLAspects.debug.xcconfig; sourceTree = "<group>"; };
-		4D952ED0F761C0BA1CCED14714F20D7D /* Aspects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Aspects-prefix.pch"; sourceTree = "<group>"; };
-		5614FC705A17F97DE4B5E67782B3E449 /* Aspects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Aspects.release.xcconfig; sourceTree = "<group>"; };
+		359E4A4C4B711213A3D1DCEA4713F94D /* BRAComments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAComments.m; path = XlsxReaderWriter/BRAComments.m; sourceTree = "<group>"; };
+		35D2E70670B4DBA65432E6CD1AD5CA20 /* BRARelationships.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRARelationships.m; path = XlsxReaderWriter/BRARelationships.m; sourceTree = "<group>"; };
+		38D02DC507C7FB896C2BE672D234E5A0 /* BRACell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACell.h; path = XlsxReaderWriter/BRACell.h; sourceTree = "<group>"; };
+		3DDA256660CDD9CEA9E3D5B3EB0DB85D /* BRAWorksheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAWorksheet.h; path = XlsxReaderWriter/BRAWorksheet.h; sourceTree = "<group>"; };
+		41013C32537EC6DF04D421EC1515CE6D /* BRAWorksheetDrawing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAWorksheetDrawing.m; path = XlsxReaderWriter/BRAWorksheetDrawing.m; sourceTree = "<group>"; };
+		421E095F9766A7C7F10E8D4C08FA2E3C /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = SSZipArchive/minizip/crypt.h; sourceTree = "<group>"; };
+		430046DE0CE6650DE9BB5C5403031566 /* Aspects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Aspects.debug.xcconfig; sourceTree = "<group>"; };
+		46517CFEA4C81754CCCF8855D35F303E /* Aspects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Aspects-dummy.m"; sourceTree = "<group>"; };
+		472D0EFA4B2F325B93AD0D79290D0E47 /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
+		47EAB53EECE78A7673C905A21AAD7B14 /* XlsxReaderWriter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XlsxReaderWriter.release.xcconfig; sourceTree = "<group>"; };
+		4802D07B4B0E97318F102AD41C90869F /* Aspects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Aspects-prefix.pch"; sourceTree = "<group>"; };
+		48977FF4C70C18BBEC2D03F87C37CCF3 /* BRAStyles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAStyles.h; path = XlsxReaderWriter/BRAStyles.h; sourceTree = "<group>"; };
+		4A43C42625DE9E3CEE1746A5181B65CB /* BRAElementWithRelationships.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAElementWithRelationships.m; path = XlsxReaderWriter/BRAElementWithRelationships.m; sourceTree = "<group>"; };
+		4A46C0B8E691F9812260F4501027FA34 /* UIColor+OpenXML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+OpenXML.m"; path = "XlsxReaderWriter/UIColor+OpenXML.m"; sourceTree = "<group>"; };
+		4B4E7937B536F3C49E42D7C7FD029297 /* XlsxReaderWriter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XlsxReaderWriter-dummy.m"; sourceTree = "<group>"; };
+		4B8429D3E8D32C38A2546A5714BAA116 /* BRAWorksheetDrawing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAWorksheetDrawing.h; path = XlsxReaderWriter/BRAWorksheetDrawing.h; sourceTree = "<group>"; };
+		4C3BB86A15F2493F8769DDBFF777E140 /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
+		4CE6613C174463FE5ED02BBF3C0F7E3C /* BRAContentTypesDefaultExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAContentTypesDefaultExtension.h; path = XlsxReaderWriter/BRAContentTypesDefaultExtension.h; sourceTree = "<group>"; };
+		4D4321F1E7180DE0BDF3DFE43598637F /* BRAContentTypesOverride.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAContentTypesOverride.m; path = XlsxReaderWriter/BRAContentTypesOverride.m; sourceTree = "<group>"; };
+		505419DAB7CB8F9646C46B51051636D4 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
+		53DA7598E1A27651C1ED0E63D0DE2CA2 /* BRAOfficeDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAOfficeDocument.m; path = XlsxReaderWriter/BRAOfficeDocument.m; sourceTree = "<group>"; };
+		5C7B0E0CA02C0BB129F338E38EAFA6E1 /* BRANumberFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRANumberFormat.m; path = XlsxReaderWriter/BRANumberFormat.m; sourceTree = "<group>"; };
+		5CCC49D20757C2CEC13AF233AB2BFC38 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = SSZipArchive/minizip/unzip.h; sourceTree = "<group>"; };
 		5D3EF77756F29765A044E52863399BB3 /* CLAConfigOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLAConfigOptions.m; path = CLAspects/Classes/CLAConfigOptions.m; sourceTree = "<group>"; };
-		618D517A4DCA886A6D4D0BEAB51D0813 /* Aspects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Aspects.debug.xcconfig; sourceTree = "<group>"; };
+		5E85950129B4CEA979F71493F87CEFEB /* BRASheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRASheet.m; path = XlsxReaderWriter/BRASheet.m; sourceTree = "<group>"; };
+		61B59D46F1A776E0C0834E880F574521 /* BRANumberFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRANumberFormat.h; path = XlsxReaderWriter/BRANumberFormat.h; sourceTree = "<group>"; };
 		6311057E366A5B76F278DBB4E9C96E88 /* CLAspects.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CLAspects.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		64F5F9178F70A21118883BCA566AC0C5 /* BRAContentTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAContentTypes.m; path = XlsxReaderWriter/BRAContentTypes.m; sourceTree = "<group>"; };
+		685A83783511DB53319A6A1116F3C234 /* XlsxReaderWriter */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = XlsxReaderWriter; path = libXlsxReaderWriter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDC061682AE5340E022AFF34EDDDFFF /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
+		6EEE475C9ADF9FAB764EE3CE0DEA8730 /* BRATheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRATheme.h; path = XlsxReaderWriter/BRATheme.h; sourceTree = "<group>"; };
+		749A2B5F6D64CAB4733CDC77DEA63163 /* NSDictionary+OpenXMLDictionaryParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+OpenXMLDictionaryParser.h"; path = "XlsxReaderWriter/NSDictionary+OpenXMLDictionaryParser.h"; sourceTree = "<group>"; };
+		7500AE016B192A11943C2CDD1D2A5EC8 /* BRATheme.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRATheme.m; path = XlsxReaderWriter/BRATheme.m; sourceTree = "<group>"; };
+		7581C0BB9459BB37646CCF1D4B74496B /* XlsxReaderWriter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XlsxReaderWriter.debug.xcconfig; sourceTree = "<group>"; };
+		77DFAFCB110B6FD2613DBBD0E7C6A4C8 /* BRAOpenXmlElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAOpenXmlElement.h; path = XlsxReaderWriter/BRAOpenXmlElement.h; sourceTree = "<group>"; };
+		7A10D4544B702759C9249DECF7223146 /* UIFont+BoldItalic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+BoldItalic.m"; path = "XlsxReaderWriter/UIFont+BoldItalic.m"; sourceTree = "<group>"; };
+		806741C2A33D312DA0C292A8CA9AE7B0 /* BRASheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRASheet.h; path = XlsxReaderWriter/BRASheet.h; sourceTree = "<group>"; };
+		80AFA96102FA7D1E6030C1C4B95C27CB /* BRAMergeCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAMergeCell.m; path = XlsxReaderWriter/BRAMergeCell.m; sourceTree = "<group>"; };
+		84351AA7A2D47EE45D7DB32ABCCC6723 /* UIColor+OpenXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+OpenXML.h"; path = "XlsxReaderWriter/UIColor+OpenXML.h"; sourceTree = "<group>"; };
+		845CCEB7CF9A556ED801D229914581ED /* NSDictionary+OpenXMLDictionaryParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+OpenXMLDictionaryParser.m"; path = "XlsxReaderWriter/NSDictionary+OpenXMLDictionaryParser.m"; sourceTree = "<group>"; };
 		873CDB2CE2AB3D55E7F7846B54D0067E /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		889DA3D7364BC6FFF9ADF7D30A570D14 /* XMLDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XMLDictionary.release.xcconfig; sourceTree = "<group>"; };
+		89492A6CD9B608030184976BCC46D7AC /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
+		8CABD7C7349C04D8F812463F963D4AF4 /* BRAComment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAComment.m; path = XlsxReaderWriter/BRAComment.m; sourceTree = "<group>"; };
+		8F8EE22D2471D5DA38CBA5F668E1CA10 /* BRACellFill.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACellFill.h; path = XlsxReaderWriter/BRACellFill.h; sourceTree = "<group>"; };
 		8F953B8D3D131938A2A00B571BEB47CF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		909F03D9B9CD05E2E431606F0400150C /* BRACalcChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACalcChain.m; path = XlsxReaderWriter/BRACalcChain.m; sourceTree = "<group>"; };
+		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = SSZipArchive; path = libSSZipArchive.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		923506369FAFAF46848158FEB73D88D0 /* BRASharedStrings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRASharedStrings.m; path = XlsxReaderWriter/BRASharedStrings.m; sourceTree = "<group>"; };
+		929162A5571885A14E18CD80EBA004D6 /* NSDictionary+DeepCopy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+DeepCopy.m"; path = "XlsxReaderWriter/NSDictionary+DeepCopy.m"; sourceTree = "<group>"; };
+		940C8A2300834D8D346202BF2D2F7B63 /* BRAContentTypesDefaultExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAContentTypesDefaultExtension.m; path = XlsxReaderWriter/BRAContentTypesDefaultExtension.m; sourceTree = "<group>"; };
+		940DB0FA83AE774273C4B301DDADB8AD /* XMLDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XMLDictionary.h; path = XMLDictionary/XMLDictionary.h; sourceTree = "<group>"; };
+		950A97D131C9DF23196B7DDCE69FB8AD /* BRAComments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAComments.h; path = XlsxReaderWriter/BRAComments.h; sourceTree = "<group>"; };
+		96C2709DE6C76EAC15085A1482278C58 /* XlsxReaderWriter-swift-bridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XlsxReaderWriter-swift-bridge.h"; path = "XlsxReaderWriter/XlsxReaderWriter-swift-bridge.h"; sourceTree = "<group>"; };
 		9808BF74538141204E4EB5B49809FE77 /* Aspects */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = Aspects; path = libAspects.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		98C3EBDF5E5DDF73830387999BDC33B9 /* Aspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 		995512BD8A1204FF064C89218D3D9059 /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		9A06B2CBC7F57E9BE08460BE730B397B /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E415CCDAAE76EC3CB2EE91827487E07 /* BRAImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAImage.h; path = XlsxReaderWriter/BRAImage.h; sourceTree = "<group>"; };
+		A17B060A9B3516017021FE20D9C86114 /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = SSZipArchive/minizip/ioapi.h; sourceTree = "<group>"; };
 		A87323D09777044A5BCB323712546A1D /* CLAspects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLAspects.release.xcconfig; sourceTree = "<group>"; };
-		B30E78E83656B249A2C505F8BD77F4D6 /* Aspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		A8A8B7FA00B8E4E17324CB33D85A672D /* BRARelationship.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRARelationship.h; path = XlsxReaderWriter/BRARelationship.h; sourceTree = "<group>"; };
+		A90A94C33030814C446697076D02A239 /* BRACalcChainCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACalcChainCell.m; path = XlsxReaderWriter/BRACalcChainCell.m; sourceTree = "<group>"; };
+		AB457069B3394A7F973402963358B195 /* BRACellFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACellFormat.m; path = XlsxReaderWriter/BRACellFormat.m; sourceTree = "<group>"; };
+		AB9398E1AF3F385BC0CD073CB763418E /* Common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Common.h; path = SSZipArchive/Common.h; sourceTree = "<group>"; };
+		AFE5E9844A1A1E30CB52DBC5F2ACC5C4 /* BRAWorksheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAWorksheet.m; path = XlsxReaderWriter/BRAWorksheet.m; sourceTree = "<group>"; };
+		B50952D34A20C298930A1C020820BBBE /* BRAOfficeDocumentPackage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAOfficeDocumentPackage.m; path = XlsxReaderWriter/BRAOfficeDocumentPackage.m; sourceTree = "<group>"; };
+		B7E59AFDEFEEE11A76CC45239CAB034E /* BRAColumn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAColumn.h; path = XlsxReaderWriter/BRAColumn.h; sourceTree = "<group>"; };
+		B95B3F9602E89B0E0CB7DA22603DE484 /* BRAOpenXmlSubElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAOpenXmlSubElement.h; path = XlsxReaderWriter/BRAOpenXmlSubElement.h; sourceTree = "<group>"; };
 		BB3210140DF521EB785C7E7F488FD97D /* CLAspects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLAspects-dummy.m"; sourceTree = "<group>"; };
+		BBFE1382784574EBB6E10B726900CDD8 /* BRAOpenXmlSubElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAOpenXmlSubElement.m; path = XlsxReaderWriter/BRAOpenXmlSubElement.m; sourceTree = "<group>"; };
+		BE364EC8F43C7DD689E9E7217AAC94CD /* NSDictionary+OpenXmlString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+OpenXmlString.m"; path = "XlsxReaderWriter/NSDictionary+OpenXmlString.m"; sourceTree = "<group>"; };
+		BEF2D4E0BBEE9C84FB31CDD9E337BDAF /* BRAVmlDrawing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAVmlDrawing.m; path = XlsxReaderWriter/BRAVmlDrawing.m; sourceTree = "<group>"; };
+		BF0FC8BA7BFE807F1374ED306A8CD8CD /* XMLDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XMLDictionary.m; path = XMLDictionary/XMLDictionary.m; sourceTree = "<group>"; };
+		C0897D3F7A3C0CCF416E2E027555F055 /* BRACellRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACellRange.h; path = XlsxReaderWriter/BRACellRange.h; sourceTree = "<group>"; };
+		C54E5E9EA053988DF825E35E7815B4BA /* BRAOfficeDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAOfficeDocument.h; path = XlsxReaderWriter/BRAOfficeDocument.h; sourceTree = "<group>"; };
+		C6B32B70C9EAA6B856C3DCB3231E5DDC /* XMLDictionary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XMLDictionary-dummy.m"; sourceTree = "<group>"; };
+		C7829EFB7116351945E8C63612309A13 /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = SSZipArchive/minizip/zip.h; sourceTree = "<group>"; };
+		C93929B919B8AE85166CCEA2A4E0DD5A /* UIColor+HTML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+HTML.h"; path = "XlsxReaderWriter/UIColor+HTML.h"; sourceTree = "<group>"; };
+		C9D10D63EBB783DD714A6E9228B6EF00 /* XMLDictionary */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = XMLDictionary; path = libXMLDictionary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAADBC6E85C5B7DC23ADBF5541F0759E /* BRAOpenXmlElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAOpenXmlElement.m; path = XlsxReaderWriter/BRAOpenXmlElement.m; sourceTree = "<group>"; };
+		CC5AD7CE56E2EC16FC24B7C26CD3122B /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
+		CDAFFE2D325BDCCDC564AE278F927CFC /* BRACalcChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACalcChain.h; path = XlsxReaderWriter/BRACalcChain.h; sourceTree = "<group>"; };
 		CEB5CE60F2648C5816E0D295E71A57FF /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CFF139AB78BDFE860163F52CF6A3FF42 /* SSZipArchive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.release.xcconfig; sourceTree = "<group>"; };
+		D179DC6DB6218C74D1C14949BCA892CE /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
+		D4A78C42F86268D15C4E5316FF4E5E55 /* BRACellRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACellRange.m; path = XlsxReaderWriter/BRACellRange.m; sourceTree = "<group>"; };
+		D5442095D7383559773F2575EF77833A /* BRARelatedToColumnAndRowProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRARelatedToColumnAndRowProtocol.h; path = XlsxReaderWriter/BRARelatedToColumnAndRowProtocol.h; sourceTree = "<group>"; };
+		D555C8892CB044411200F78619F41689 /* BRARow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRARow.h; path = XlsxReaderWriter/BRARow.h; sourceTree = "<group>"; };
 		D5BFEF1DDF3D2D328528F7A565F5177D /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
+		DBE18D8BC0E5397338E75D826E208DE7 /* BRARelationships.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRARelationships.h; path = XlsxReaderWriter/BRARelationships.h; sourceTree = "<group>"; };
+		DC303214CD8906B74936AF6BDC6BD226 /* BRACellFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACellFormat.h; path = XlsxReaderWriter/BRACellFormat.h; sourceTree = "<group>"; };
+		DD6435F462B4FE77D981E98B568A7258 /* BRAOfficeDocumentPackage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAOfficeDocumentPackage.h; path = XlsxReaderWriter/BRAOfficeDocumentPackage.h; sourceTree = "<group>"; };
 		DF2A683DA724D7C1198DB189A9AD204C /* CLAspects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLAspects-prefix.pch"; sourceTree = "<group>"; };
+		E163FD6E2369B8DD45DA07AB274B025E /* NSDictionary+DeepCopy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+DeepCopy.h"; path = "XlsxReaderWriter/NSDictionary+DeepCopy.h"; sourceTree = "<group>"; };
+		E5029F8F0CC77BAB00934A794DAFCAAB /* XMLDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XMLDictionary.debug.xcconfig; sourceTree = "<group>"; };
+		E64629DBF98015EFFF618106C3561A9A /* BRAColumn.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAColumn.m; path = XlsxReaderWriter/BRAColumn.m; sourceTree = "<group>"; };
+		EDDB1A0FA97DFCDAF79FFF713C14FD07 /* SSZipArchive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.debug.xcconfig; sourceTree = "<group>"; };
+		EF02F9780BA7494F62E32943BBDAE2D5 /* BRASharedString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRASharedString.m; path = XlsxReaderWriter/BRASharedString.m; sourceTree = "<group>"; };
+		F175747E0C0C9D75023DC61F1F2821F8 /* XlsxReaderWriter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XlsxReaderWriter-prefix.pch"; sourceTree = "<group>"; };
+		F353BE3384052D53F7ACF612E839038A /* XMLDictionary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMLDictionary-prefix.pch"; sourceTree = "<group>"; };
+		F4DD0418F35AE07EF2DDB3A923B0EBE1 /* BRACalcChainCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACalcChainCell.h; path = XlsxReaderWriter/BRACalcChainCell.h; sourceTree = "<group>"; };
+		F5880BB79B084F1CAB519A58A4E352D2 /* UIColor+HTML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HTML.m"; path = "XlsxReaderWriter/UIColor+HTML.m"; sourceTree = "<group>"; };
+		FA8721C49D4A0A4910D8DFB5E68D89B4 /* BRARow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRARow.m; path = XlsxReaderWriter/BRARow.m; sourceTree = "<group>"; };
+		FAC29DDDA98BD9CFBD750476369C4ACD /* BRAImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAImage.m; path = XlsxReaderWriter/BRAImage.m; sourceTree = "<group>"; };
+		FC12EC429ADD6DA8558AC70BA3E06F6E /* mztools.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mztools.c; path = SSZipArchive/minizip/mztools.c; sourceTree = "<group>"; };
+		FC68306847A4A3B1E0C923997238BFC7 /* BRASharedString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRASharedString.h; path = XlsxReaderWriter/BRASharedString.h; sourceTree = "<group>"; };
 		FD4B31928228BB391B97CBC13FDE59C4 /* CLAspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLAspects.h; path = CLAspects/Classes/CLAspects.h; sourceTree = "<group>"; };
+		FE1755CEAECBDD439B0912092B219284 /* BRAVmlDrawing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAVmlDrawing.h; path = XlsxReaderWriter/BRAVmlDrawing.h; sourceTree = "<group>"; };
+		FF7186B3448A869C45CA6EBE6CE4EA3D /* BRASharedStrings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRASharedStrings.h; path = XlsxReaderWriter/BRASharedStrings.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		12620CF954D12C7573D293DC6782490C /* Frameworks */ = {
+		1335FAF8858279035184ACBD2174DA20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,7 +330,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE4A4B6EFCE599964DECA9D096B9CDC1 /* Frameworks */ = {
+		6C87D0B44B84065EF8D46EEBBF4B701A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BF7D4D678127B5559E95F8195410AF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E428736DD5FE584CF94CE4CED46BCF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8968FAD155B33258D0B6040774AA3398 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -96,16 +361,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03169F243B22A6EF3EF30126E7700123 /* Support Files */ = {
+		10F247536AA40941951E7415D4444F83 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				294023A17A64B93731AC48F5311B08E1 /* Aspects-dummy.m */,
-				4D952ED0F761C0BA1CCED14714F20D7D /* Aspects-prefix.pch */,
-				618D517A4DCA886A6D4D0BEAB51D0813 /* Aspects.debug.xcconfig */,
-				5614FC705A17F97DE4B5E67782B3E449 /* Aspects.release.xcconfig */,
+				9808BF74538141204E4EB5B49809FE77 /* Aspects */,
+				0B66DA72224BEFB1BE416FE6C16954D7 /* CLAspects */,
+				1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */,
+				91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive */,
+				685A83783511DB53319A6A1116F3C234 /* XlsxReaderWriter */,
+				C9D10D63EBB783DD714A6E9228B6EF00 /* XMLDictionary */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Aspects";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		162741B1A489130DA83BDC6301500732 /* Development Pods */ = {
@@ -116,15 +382,16 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		18ECB66E49FFC6B8E670A422FAFFC9C1 /* Aspects */ = {
+		30D5F08FE435E696F6CE5A2701EDF2B4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				325E1DE4DCB4C534D06ABCD63E2F8B15 /* Aspects.h */,
-				B30E78E83656B249A2C505F8BD77F4D6 /* Aspects.m */,
-				03169F243B22A6EF3EF30126E7700123 /* Support Files */,
+				4B4E7937B536F3C49E42D7C7FD029297 /* XlsxReaderWriter-dummy.m */,
+				F175747E0C0C9D75023DC61F1F2821F8 /* XlsxReaderWriter-prefix.pch */,
+				7581C0BB9459BB37646CCF1D4B74496B /* XlsxReaderWriter.debug.xcconfig */,
+				47EAB53EECE78A7673C905A21AAD7B14 /* XlsxReaderWriter.release.xcconfig */,
 			);
-			name = Aspects;
-			path = Aspects;
+			name = "Support Files";
+			path = "../Target Support Files/XlsxReaderWriter";
 			sourceTree = "<group>";
 		};
 		5CA4C252654F02A65F0F260A01829D38 /* Support Files */ = {
@@ -152,6 +419,93 @@
 			path = "Target Support Files/Pods-Example";
 			sourceTree = "<group>";
 		};
+		75F8D84236D652E6587CBBD613833D55 /* XlsxReaderWriter */ = {
+			isa = PBXGroup;
+			children = (
+				CDAFFE2D325BDCCDC564AE278F927CFC /* BRACalcChain.h */,
+				909F03D9B9CD05E2E431606F0400150C /* BRACalcChain.m */,
+				F4DD0418F35AE07EF2DDB3A923B0EBE1 /* BRACalcChainCell.h */,
+				A90A94C33030814C446697076D02A239 /* BRACalcChainCell.m */,
+				38D02DC507C7FB896C2BE672D234E5A0 /* BRACell.h */,
+				2109D947C6EDF3CB68B636DE4654D2C8 /* BRACell.m */,
+				8F8EE22D2471D5DA38CBA5F668E1CA10 /* BRACellFill.h */,
+				07C2FBEA94EB30538016E3D0BE43A4B0 /* BRACellFill.m */,
+				DC303214CD8906B74936AF6BDC6BD226 /* BRACellFormat.h */,
+				AB457069B3394A7F973402963358B195 /* BRACellFormat.m */,
+				C0897D3F7A3C0CCF416E2E027555F055 /* BRACellRange.h */,
+				D4A78C42F86268D15C4E5316FF4E5E55 /* BRACellRange.m */,
+				B7E59AFDEFEEE11A76CC45239CAB034E /* BRAColumn.h */,
+				E64629DBF98015EFFF618106C3561A9A /* BRAColumn.m */,
+				1E0A253A9C9AC18392FA549F4DC0040E /* BRAComment.h */,
+				8CABD7C7349C04D8F812463F963D4AF4 /* BRAComment.m */,
+				950A97D131C9DF23196B7DDCE69FB8AD /* BRAComments.h */,
+				359E4A4C4B711213A3D1DCEA4713F94D /* BRAComments.m */,
+				1E51D8BDD56D68062E646EB587356B3C /* BRAContentTypes.h */,
+				64F5F9178F70A21118883BCA566AC0C5 /* BRAContentTypes.m */,
+				4CE6613C174463FE5ED02BBF3C0F7E3C /* BRAContentTypesDefaultExtension.h */,
+				940C8A2300834D8D346202BF2D2F7B63 /* BRAContentTypesDefaultExtension.m */,
+				04CAF20C92C4073A7E25FEC51A64582A /* BRAContentTypesOverride.h */,
+				4D4321F1E7180DE0BDF3DFE43598637F /* BRAContentTypesOverride.m */,
+				2D7F8E275F51C6C48647E8AA2140FE5F /* BRADrawing.h */,
+				03CB49312F991551573702716630F057 /* BRADrawing.m */,
+				354F6A27B1640EE3839733793AA37302 /* BRAElementWithRelationships.h */,
+				4A43C42625DE9E3CEE1746A5181B65CB /* BRAElementWithRelationships.m */,
+				9E415CCDAAE76EC3CB2EE91827487E07 /* BRAImage.h */,
+				FAC29DDDA98BD9CFBD750476369C4ACD /* BRAImage.m */,
+				26A36BEED1257654D3CC1E3039372273 /* BRAMergeCell.h */,
+				80AFA96102FA7D1E6030C1C4B95C27CB /* BRAMergeCell.m */,
+				61B59D46F1A776E0C0834E880F574521 /* BRANumberFormat.h */,
+				5C7B0E0CA02C0BB129F338E38EAFA6E1 /* BRANumberFormat.m */,
+				C54E5E9EA053988DF825E35E7815B4BA /* BRAOfficeDocument.h */,
+				53DA7598E1A27651C1ED0E63D0DE2CA2 /* BRAOfficeDocument.m */,
+				DD6435F462B4FE77D981E98B568A7258 /* BRAOfficeDocumentPackage.h */,
+				B50952D34A20C298930A1C020820BBBE /* BRAOfficeDocumentPackage.m */,
+				77DFAFCB110B6FD2613DBBD0E7C6A4C8 /* BRAOpenXmlElement.h */,
+				CAADBC6E85C5B7DC23ADBF5541F0759E /* BRAOpenXmlElement.m */,
+				B95B3F9602E89B0E0CB7DA22603DE484 /* BRAOpenXmlSubElement.h */,
+				BBFE1382784574EBB6E10B726900CDD8 /* BRAOpenXmlSubElement.m */,
+				D5442095D7383559773F2575EF77833A /* BRARelatedToColumnAndRowProtocol.h */,
+				A8A8B7FA00B8E4E17324CB33D85A672D /* BRARelationship.h */,
+				235869680D17A50E8C05DF1EA3C1F1C2 /* BRARelationship.m */,
+				DBE18D8BC0E5397338E75D826E208DE7 /* BRARelationships.h */,
+				35D2E70670B4DBA65432E6CD1AD5CA20 /* BRARelationships.m */,
+				D555C8892CB044411200F78619F41689 /* BRARow.h */,
+				FA8721C49D4A0A4910D8DFB5E68D89B4 /* BRARow.m */,
+				FC68306847A4A3B1E0C923997238BFC7 /* BRASharedString.h */,
+				EF02F9780BA7494F62E32943BBDAE2D5 /* BRASharedString.m */,
+				FF7186B3448A869C45CA6EBE6CE4EA3D /* BRASharedStrings.h */,
+				923506369FAFAF46848158FEB73D88D0 /* BRASharedStrings.m */,
+				806741C2A33D312DA0C292A8CA9AE7B0 /* BRASheet.h */,
+				5E85950129B4CEA979F71493F87CEFEB /* BRASheet.m */,
+				48977FF4C70C18BBEC2D03F87C37CCF3 /* BRAStyles.h */,
+				2B3EABE3701957A140752798E2862641 /* BRAStyles.m */,
+				6EEE475C9ADF9FAB764EE3CE0DEA8730 /* BRATheme.h */,
+				7500AE016B192A11943C2CDD1D2A5EC8 /* BRATheme.m */,
+				FE1755CEAECBDD439B0912092B219284 /* BRAVmlDrawing.h */,
+				BEF2D4E0BBEE9C84FB31CDD9E337BDAF /* BRAVmlDrawing.m */,
+				3DDA256660CDD9CEA9E3D5B3EB0DB85D /* BRAWorksheet.h */,
+				AFE5E9844A1A1E30CB52DBC5F2ACC5C4 /* BRAWorksheet.m */,
+				4B8429D3E8D32C38A2546A5714BAA116 /* BRAWorksheetDrawing.h */,
+				41013C32537EC6DF04D421EC1515CE6D /* BRAWorksheetDrawing.m */,
+				E163FD6E2369B8DD45DA07AB274B025E /* NSDictionary+DeepCopy.h */,
+				929162A5571885A14E18CD80EBA004D6 /* NSDictionary+DeepCopy.m */,
+				749A2B5F6D64CAB4733CDC77DEA63163 /* NSDictionary+OpenXMLDictionaryParser.h */,
+				845CCEB7CF9A556ED801D229914581ED /* NSDictionary+OpenXMLDictionaryParser.m */,
+				1B2A07BFB9463DE1346CA3284173A99C /* NSDictionary+OpenXmlString.h */,
+				BE364EC8F43C7DD689E9E7217AAC94CD /* NSDictionary+OpenXmlString.m */,
+				C93929B919B8AE85166CCEA2A4E0DD5A /* UIColor+HTML.h */,
+				F5880BB79B084F1CAB519A58A4E352D2 /* UIColor+HTML.m */,
+				84351AA7A2D47EE45D7DB32ABCCC6723 /* UIColor+OpenXML.h */,
+				4A46C0B8E691F9812260F4501027FA34 /* UIColor+OpenXML.m */,
+				13707221347E7B3A228C15F58A5066F4 /* UIFont+BoldItalic.h */,
+				7A10D4544B702759C9249DECF7223146 /* UIFont+BoldItalic.m */,
+				96C2709DE6C76EAC15085A1482278C58 /* XlsxReaderWriter-swift-bridge.h */,
+				30D5F08FE435E696F6CE5A2701EDF2B4 /* Support Files */,
+			);
+			name = XlsxReaderWriter;
+			path = XlsxReaderWriter;
+			sourceTree = "<group>";
+		};
 		763A66ABE6174644B98D51AFB43DF547 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,14 +516,50 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		A37045BEC3121E099690E83DFCBC9E3B /* Products */ = {
+		9F00C2DC106DF89E8697D3A95750C6AD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9808BF74538141204E4EB5B49809FE77 /* Aspects */,
-				0B66DA72224BEFB1BE416FE6C16954D7 /* CLAspects */,
-				1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */,
+				46517CFEA4C81754CCCF8855D35F303E /* Aspects-dummy.m */,
+				4802D07B4B0E97318F102AD41C90869F /* Aspects-prefix.pch */,
+				430046DE0CE6650DE9BB5C5403031566 /* Aspects.debug.xcconfig */,
+				1BA7F2D59B4817DBDCA632A7873D9C55 /* Aspects.release.xcconfig */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/Aspects";
+			sourceTree = "<group>";
+		};
+		A12CDFFBC527BB1BD3D93940ACFB1DBB /* XMLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				940DB0FA83AE774273C4B301DDADB8AD /* XMLDictionary.h */,
+				BF0FC8BA7BFE807F1374ED306A8CD8CD /* XMLDictionary.m */,
+				B9AB6049EB033872157412432C81CDD2 /* Support Files */,
+			);
+			name = XMLDictionary;
+			path = XMLDictionary;
+			sourceTree = "<group>";
+		};
+		B0A1D60B20087070F6B57B1F45CFB9D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA2A31DADDE0430E29AF6577AB6D751B /* Aspects */,
+				F5BBA3CD55B16B93E40E547C933234DE /* SSZipArchive */,
+				75F8D84236D652E6587CBBD613833D55 /* XlsxReaderWriter */,
+				A12CDFFBC527BB1BD3D93940ACFB1DBB /* XMLDictionary */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B9AB6049EB033872157412432C81CDD2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6B32B70C9EAA6B856C3DCB3231E5DDC /* XMLDictionary-dummy.m */,
+				F353BE3384052D53F7ACF612E839038A /* XMLDictionary-prefix.pch */,
+				E5029F8F0CC77BAB00934A794DAFCAAB /* XMLDictionary.debug.xcconfig */,
+				889DA3D7364BC6FFF9ADF7D30A570D14 /* XMLDictionary.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XMLDictionary";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -178,18 +568,10 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				162741B1A489130DA83BDC6301500732 /* Development Pods */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				D4235D072F0DC7818942872CBFF5FCF4 /* Pods */,
-				A37045BEC3121E099690E83DFCBC9E3B /* Products */,
+				B0A1D60B20087070F6B57B1F45CFB9D2 /* Pods */,
+				10F247536AA40941951E7415D4444F83 /* Products */,
 				D5B8D0B62F1C86934FF4C6E7C9986E7F /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D4235D072F0DC7818942872CBFF5FCF4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				18ECB66E49FFC6B8E670A422FAFFC9C1 /* Aspects */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		D5B8D0B62F1C86934FF4C6E7C9986E7F /* Targets Support Files */ = {
@@ -205,6 +587,50 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDC9BA78AD5CD4C23FF401FF4542A6C7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				472D0EFA4B2F325B93AD0D79290D0E47 /* SSZipArchive-dummy.m */,
+				D179DC6DB6218C74D1C14949BCA892CE /* SSZipArchive-prefix.pch */,
+				EDDB1A0FA97DFCDAF79FFF713C14FD07 /* SSZipArchive.debug.xcconfig */,
+				CFF139AB78BDFE860163F52CF6A3FF42 /* SSZipArchive.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SSZipArchive";
+			sourceTree = "<group>";
+		};
+		F5BBA3CD55B16B93E40E547C933234DE /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				AB9398E1AF3F385BC0CD073CB763418E /* Common.h */,
+				421E095F9766A7C7F10E8D4C08FA2E3C /* crypt.h */,
+				CC5AD7CE56E2EC16FC24B7C26CD3122B /* ioapi.c */,
+				A17B060A9B3516017021FE20D9C86114 /* ioapi.h */,
+				FC12EC429ADD6DA8558AC70BA3E06F6E /* mztools.c */,
+				0BF8A4342CC27945F4ABA6892B51F83A /* mztools.h */,
+				89492A6CD9B608030184976BCC46D7AC /* SSZipArchive.h */,
+				6EDC061682AE5340E022AFF34EDDDFFF /* SSZipArchive.m */,
+				505419DAB7CB8F9646C46B51051636D4 /* unzip.c */,
+				5CCC49D20757C2CEC13AF233AB2BFC38 /* unzip.h */,
+				4C3BB86A15F2493F8769DDBFF777E140 /* zip.c */,
+				C7829EFB7116351945E8C63612309A13 /* zip.h */,
+				DDC9BA78AD5CD4C23FF401FF4542A6C7 /* Support Files */,
+			);
+			name = SSZipArchive;
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		FA2A31DADDE0430E29AF6577AB6D751B /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				29689CF603D53D670F477B1C36841F62 /* Aspects.h */,
+				98C3EBDF5E5DDF73830387999BDC33B9 /* Aspects.m */,
+				9F00C2DC106DF89E8697D3A95750C6AD /* Support Files */,
+			);
+			name = Aspects;
+			path = Aspects;
 			sourceTree = "<group>";
 		};
 		FCD76ABC7D8C8A9D94431FA80F220F39 /* CLAspects */ = {
@@ -224,12 +650,57 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0F1C2D2742A4F1F17ED6C4C0585E9FB6 /* Headers */ = {
+		00DAA2F6D3AC7677C8727E7A4CAC06C1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1883F4385169E8220A23A3B095BE1884 /* CLAConfigOptions.h in Headers */,
-				4E12BC1E33C94AD0FEB28EFC78FAC189 /* CLAspects.h in Headers */,
+				1401D185D51FA8D87EB7FCFA0D328FD2 /* BRACalcChain.h in Headers */,
+				D46AF5DC4A9F122756B78BAB4C1A0A4B /* BRACalcChainCell.h in Headers */,
+				3E6B12289C35A8CE897542A7D82BB1F6 /* BRACell.h in Headers */,
+				DD49F72B288EF192B9BE5084B486ADA0 /* BRACellFill.h in Headers */,
+				693113D3F805FF937721D24AE30B0D90 /* BRACellFormat.h in Headers */,
+				788A82E927E7AB9C2547F721FF10ED8C /* BRACellRange.h in Headers */,
+				558056704174AB897D07BB447320C969 /* BRAColumn.h in Headers */,
+				F77F45152270D302FE3D8B569906A700 /* BRAComment.h in Headers */,
+				1BC61FD0FC7205914DCDD50D10209C4C /* BRAComments.h in Headers */,
+				507EB916D55736383CE40FE16374D5D0 /* BRAContentTypes.h in Headers */,
+				8B14485F44B39C5ABE6042B85D0145B1 /* BRAContentTypesDefaultExtension.h in Headers */,
+				C201E49B43E0DDA3F61F5B968C7A01C4 /* BRAContentTypesOverride.h in Headers */,
+				4EB8949AD7BB4A35249F94287F608F54 /* BRADrawing.h in Headers */,
+				57FFF5218292989AC483C0353C8465FA /* BRAElementWithRelationships.h in Headers */,
+				7AD913531CCDCBEEA62693D2AAAF5FE2 /* BRAImage.h in Headers */,
+				119456060384A4763D1CFB7ADC5DD983 /* BRAMergeCell.h in Headers */,
+				EF061E986FB8DD2FC336B52BFA78A14D /* BRANumberFormat.h in Headers */,
+				D31DE0E8880FBE2A8D92A786D43E5206 /* BRAOfficeDocument.h in Headers */,
+				7447C4C1854CB4FC6009BA14042B1498 /* BRAOfficeDocumentPackage.h in Headers */,
+				7F27B98366A11EE0954D471D614FEA4D /* BRAOpenXmlElement.h in Headers */,
+				22BDD2E718A36CEFCC1916FAB904CA42 /* BRAOpenXmlSubElement.h in Headers */,
+				F84CF940579597DDCAD72DCE86249E26 /* BRARelatedToColumnAndRowProtocol.h in Headers */,
+				79BD610F1A1CE377F50F297A0EEFCFBF /* BRARelationship.h in Headers */,
+				B6BC63EF049B6161F16062044E88801E /* BRARelationships.h in Headers */,
+				336FEDC515FD00D45131C31F8D743F32 /* BRARow.h in Headers */,
+				28E3FC123371D25E5200F6D5E08D8F06 /* BRASharedString.h in Headers */,
+				23EAE69FDA063B29A9B03F48ADDC08B1 /* BRASharedStrings.h in Headers */,
+				0C427EB3C41F94C5EC3D20D9B2937650 /* BRASheet.h in Headers */,
+				15A78118BD301630912124541D68370A /* BRAStyles.h in Headers */,
+				2AFF880F1BCDE168DE3083F5288D7228 /* BRATheme.h in Headers */,
+				D1ED6DA0C7577EF19F5DB0F746942C63 /* BRAVmlDrawing.h in Headers */,
+				E9CE8A03B1B66978A81447D40732F9DB /* BRAWorksheet.h in Headers */,
+				441AC6008A715D8A9E065AF0D3573366 /* BRAWorksheetDrawing.h in Headers */,
+				0C69B70EB1FEB6A463849ACE9743CE90 /* NSDictionary+DeepCopy.h in Headers */,
+				A94CA6FAA04AF69A47F87414403C6020 /* NSDictionary+OpenXMLDictionaryParser.h in Headers */,
+				F3B894884AA63D96D4074BC3863EA0B1 /* NSDictionary+OpenXmlString.h in Headers */,
+				0FCC19E386307B7CE32ADD684E875B69 /* UIColor+HTML.h in Headers */,
+				C6346EF9A1EB84C1F7988EB4D8C6DF30 /* UIColor+OpenXML.h in Headers */,
+				8126FA312EE76E20C5E21775E87D1172 /* UIFont+BoldItalic.h in Headers */,
+				32333D3690AFC48B5F68448FAC9CB622 /* XlsxReaderWriter-swift-bridge.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435680F24D20699DA119671996FD89B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,10 +712,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		770A4E876D68AC6581DF66680C98979E /* Headers */ = {
+		670997685917D600F1A591B3C46BEBBF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7CDFDEE68B3F16DF93615A57104B0A /* XMLDictionary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B54B703C836714D50B85A1D602500AEE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20217ECB95EA8390C7134F2DC102752C /* Common.h in Headers */,
+				C04227EABAB500D304FBDE727A19ABD8 /* crypt.h in Headers */,
+				B09DE9AFC23F99DA8D758821CE31835B /* ioapi.h in Headers */,
+				18212442C70CD7141B7115B9087A73F9 /* mztools.h in Headers */,
+				94457736ACBD84171A77DE5696C00E48 /* SSZipArchive.h in Headers */,
+				2803828B08399CCDDCF809C6A9F9D9E3 /* unzip.h in Headers */,
+				AF65F527F64651A8669ECE7DA3F744B8 /* zip.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF82214B8FA239307BDAF6740B22E085 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8A07609602C62E0C9676DFBA340198 /* CLAConfigOptions.h in Headers */,
+				538966BAA891209A5C2AD2D246A20238 /* CLAspects.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,39 +748,79 @@
 /* Begin PBXNativeTarget section */
 		0AEE99A309977BD12A049FF48AF9BA4B /* Pods-Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87C1E9A37BA81FB393C3AF43D810A6FD /* Build configuration list for PBXNativeTarget "Pods-Example" */;
+			buildConfigurationList = AF59060AF2D7A52353BDFDE48AFC4A18 /* Build configuration list for PBXNativeTarget "Pods-Example" */;
 			buildPhases = (
-				770A4E876D68AC6581DF66680C98979E /* Headers */,
-				AE545691AC9CDD0E369B6CE101C92EAE /* Sources */,
-				FE4A4B6EFCE599964DECA9D096B9CDC1 /* Frameworks */,
+				435680F24D20699DA119671996FD89B4 /* Headers */,
+				F4621941AF77E2A5A0FB64FC6B508EC3 /* Sources */,
+				1335FAF8858279035184ACBD2174DA20 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4BA4B927272BAF294536AB8BEF5A9ACB /* PBXTargetDependency */,
-				3FAD53E548590A61893B80958F83E2A0 /* PBXTargetDependency */,
+				AD5839D18C5C90A168D76A2D7D07C77E /* PBXTargetDependency */,
+				99A5D18B35DA9B5A91E5E2CD2DBDE0C4 /* PBXTargetDependency */,
+				3515DDBDB048AD3FEA696A78A8FA49B3 /* PBXTargetDependency */,
+				D3BF6832F68E69CF29167515AAF645A4 /* PBXTargetDependency */,
+				0A8B6011A4F176999B10A1F0351EAE81 /* PBXTargetDependency */,
 			);
 			name = "Pods-Example";
 			productName = "Pods-Example";
 			productReference = 1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */;
 			productType = "com.apple.product-type.library.static";
 		};
-		A59CD135374A833F453EE431100C569A /* CLAspects */ = {
+		9137C1635807AFB96F5BB125784CCF06 /* XMLDictionary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 34DBCB8F0766F10ADCDD24B0CC871055 /* Build configuration list for PBXNativeTarget "CLAspects" */;
+			buildConfigurationList = 04E02ECB88A17C7200DCDAA55F3E4363 /* Build configuration list for PBXNativeTarget "XMLDictionary" */;
 			buildPhases = (
-				0F1C2D2742A4F1F17ED6C4C0585E9FB6 /* Headers */,
-				BB2C5A4A7B2CA7689BD23112D528676A /* Sources */,
-				12620CF954D12C7573D293DC6782490C /* Frameworks */,
+				670997685917D600F1A591B3C46BEBBF /* Headers */,
+				1BFD7F337FAA46D868FC3250DEEB18EE /* Sources */,
+				7E428736DD5FE584CF94CE4CED46BCF2 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				53970593A43A7B84144D695E3CE7302C /* PBXTargetDependency */,
+			);
+			name = XMLDictionary;
+			productName = XMLDictionary;
+			productReference = C9D10D63EBB783DD714A6E9228B6EF00 /* XMLDictionary */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A59CD135374A833F453EE431100C569A /* CLAspects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C4F6A27F89957AA361471425929C6E9 /* Build configuration list for PBXNativeTarget "CLAspects" */;
+			buildPhases = (
+				EF82214B8FA239307BDAF6740B22E085 /* Headers */,
+				8DFE366B6B0757E382488060B6904170 /* Sources */,
+				6C87D0B44B84065EF8D46EEBBF4B701A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BC6A6EF80A7E14E30D9037B3853303A /* PBXTargetDependency */,
+				D95717D064917F8D73B35E96E26D16A7 /* PBXTargetDependency */,
 			);
 			name = CLAspects;
 			productName = CLAspects;
 			productReference = 0B66DA72224BEFB1BE416FE6C16954D7 /* CLAspects */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AF717B65664D59F1F03B1F2B6929C233 /* XlsxReaderWriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5962DEA5543004FB232F3A8A7D41B120 /* Build configuration list for PBXNativeTarget "XlsxReaderWriter" */;
+			buildPhases = (
+				00DAA2F6D3AC7677C8727E7A4CAC06C1 /* Headers */,
+				9196395D7F636E7FCCD38EDE84D27849 /* Sources */,
+				8968FAD155B33258D0B6040774AA3398 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86954BC7EAE71D1595584C18E7806D1B /* PBXTargetDependency */,
+				1747045FB70DD33D37498A8D782F5E2C /* PBXTargetDependency */,
+			);
+			name = XlsxReaderWriter;
+			productName = XlsxReaderWriter;
+			productReference = 685A83783511DB53319A6A1116F3C234 /* XlsxReaderWriter */;
 			productType = "com.apple.product-type.library.static";
 		};
 		C6539905C4D50932B36244650B93C79B /* Aspects */ = {
@@ -303,6 +838,23 @@
 			name = Aspects;
 			productName = Aspects;
 			productReference = 9808BF74538141204E4EB5B49809FE77 /* Aspects */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E4F1EBC311F2EB7335478B2E6110006 /* Build configuration list for PBXNativeTarget "SSZipArchive" */;
+			buildPhases = (
+				B54B703C836714D50B85A1D602500AEE /* Headers */,
+				728793D1B9F334D3AEF74D0E76A86F7E /* Sources */,
+				7BF7D4D678127B5559E95F8195410AF1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSZipArchive;
+			productName = SSZipArchive;
+			productReference = 91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -323,18 +875,43 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = A37045BEC3121E099690E83DFCBC9E3B /* Products */;
+			productRefGroup = 10F247536AA40941951E7415D4444F83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C6539905C4D50932B36244650B93C79B /* Aspects */,
 				A59CD135374A833F453EE431100C569A /* CLAspects */,
 				0AEE99A309977BD12A049FF48AF9BA4B /* Pods-Example */,
+				F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */,
+				AF717B65664D59F1F03B1F2B6929C233 /* XlsxReaderWriter */,
+				9137C1635807AFB96F5BB125784CCF06 /* XMLDictionary */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1BFD7F337FAA46D868FC3250DEEB18EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B5EE298048A763BA388C108FB18375A /* XMLDictionary.m in Sources */,
+				BB301AB94324EA18C25B06F1F1A44EDD /* XMLDictionary-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		728793D1B9F334D3AEF74D0E76A86F7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3312A620D4C54D399423E691EF40C8A4 /* ioapi.c in Sources */,
+				1A2BB669597CF315FC63305CC1E987C9 /* mztools.c in Sources */,
+				D4D4511640EDBFF65BAA368B20F47620 /* SSZipArchive.m in Sources */,
+				AB16B53B19E25A10E56C398B0FA3C05E /* SSZipArchive-dummy.m in Sources */,
+				AC4EA97AC9E824275004E460CC29642E /* unzip.c in Sources */,
+				5B1C9CABC362FA3D12BE81E27571CFC1 /* zip.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86A96A1316BC30B14C4F92E182464BFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,49 +921,266 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE545691AC9CDD0E369B6CE101C92EAE /* Sources */ = {
+		8DFE366B6B0757E382488060B6904170 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B6A566087E1058A1B568AB577473A17 /* Pods-Example-dummy.m in Sources */,
+				E976F49AD661D927C56E3282EA3EF1E0 /* CLAConfigOptions.m in Sources */,
+				D4CF4E2781279E7844872DA5F02A2C4A /* CLAspects.m in Sources */,
+				5998F991FED7B6164CC553BE79B581DE /* CLAspects-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB2C5A4A7B2CA7689BD23112D528676A /* Sources */ = {
+		9196395D7F636E7FCCD38EDE84D27849 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1522CD935DCA2963232BDEB62E92A973 /* CLAConfigOptions.m in Sources */,
-				7CF1484AA5CC1843AE45C4CA0C0D1142 /* CLAspects.m in Sources */,
-				7F63909F08B4B6E09A847845F8696F29 /* CLAspects-dummy.m in Sources */,
+				B89DD8416843504E3584139D6234A869 /* BRACalcChain.m in Sources */,
+				E8637810BD95307DCA3FA1EAC1F25CE3 /* BRACalcChainCell.m in Sources */,
+				D52152E37CBEDB8BF6225F3CFE37E986 /* BRACell.m in Sources */,
+				E2E42ADCF40BD51C43E1A28CE679F268 /* BRACellFill.m in Sources */,
+				B204FE2C26ED48746103C2FF3439FCE5 /* BRACellFormat.m in Sources */,
+				165BB965C8080C2EF5F7B49674EEE853 /* BRACellRange.m in Sources */,
+				831F5D097F6303EF73CEFD10F608636D /* BRAColumn.m in Sources */,
+				429B8C2EA0DA1BFD6088583B1829139B /* BRAComment.m in Sources */,
+				E49F30B098D58270E0F88436321ABF14 /* BRAComments.m in Sources */,
+				D9C3E1113829C2C5EBF9F450A6A6E486 /* BRAContentTypes.m in Sources */,
+				F2DBF024B8DAA1D399A4A67F1D355C35 /* BRAContentTypesDefaultExtension.m in Sources */,
+				BFA0DED1E749AC73E2DACC3C87B7CE09 /* BRAContentTypesOverride.m in Sources */,
+				A356DE5E018ED4C1D83862A6E78A8B5F /* BRADrawing.m in Sources */,
+				CDD5CCCDFB4DBDC7F41EB1CB2817618A /* BRAElementWithRelationships.m in Sources */,
+				4DEBFBB0228C9A18CDE47F426A61B50F /* BRAImage.m in Sources */,
+				34ABC2AF9FB46052C7496AA1AD12DCB2 /* BRAMergeCell.m in Sources */,
+				3FDAAB58650886774BEDA38423D5D935 /* BRANumberFormat.m in Sources */,
+				69FBEE774E5C5C53C5303AC6962F31AC /* BRAOfficeDocument.m in Sources */,
+				D4018D06EE5BAA468EE4422CCEEE7D4A /* BRAOfficeDocumentPackage.m in Sources */,
+				EF52BE5010E77981FC37A5498189F191 /* BRAOpenXmlElement.m in Sources */,
+				50685365EEA763145A2310CA9EFA59C7 /* BRAOpenXmlSubElement.m in Sources */,
+				29D835BB619BBC8D29F1224018DB5F00 /* BRARelationship.m in Sources */,
+				AB3F9B73663EA11ED44546D4C5DC022D /* BRARelationships.m in Sources */,
+				F85DD5C89ECC94B424F45F238C4CF5D8 /* BRARow.m in Sources */,
+				55E429F27F605DB019FC142D30A60C2F /* BRASharedString.m in Sources */,
+				4D753DFDC957CD1DA80AD9EBDE1990A9 /* BRASharedStrings.m in Sources */,
+				73932C7DD499F1A0BBE2203D99115066 /* BRASheet.m in Sources */,
+				6239114943EBC3B0591A76690657432D /* BRAStyles.m in Sources */,
+				EBF2803206C6FAA206FC64A6B6253C39 /* BRATheme.m in Sources */,
+				12A6A6CFBF3321A479C9FAF86236AB62 /* BRAVmlDrawing.m in Sources */,
+				76C532D323BB1A24A9C8471001FFD90F /* BRAWorksheet.m in Sources */,
+				653CF335F4EFF870BC374D3C7EC9CD25 /* BRAWorksheetDrawing.m in Sources */,
+				659B82C0235258BEE7FCFE50780641B8 /* NSDictionary+DeepCopy.m in Sources */,
+				5F2272745D7BEDDBBAF3C958C47BE619 /* NSDictionary+OpenXMLDictionaryParser.m in Sources */,
+				ADAB41DDDBB95EC203814CB0BFB25BFB /* NSDictionary+OpenXmlString.m in Sources */,
+				4BBA729884B45B189AD85D8FE53B3178 /* UIColor+HTML.m in Sources */,
+				1A217EE137FB94118050C18EE02418EB /* UIColor+OpenXML.m in Sources */,
+				5448012DBDA0027E95C7C5D9463EDF03 /* UIFont+BoldItalic.m in Sources */,
+				5D361B8648ACD723653EEA0691A773B1 /* XlsxReaderWriter-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4621941AF77E2A5A0FB64FC6B508EC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A18D3FD5EAF7F53D20FB60F0E5D9BFC4 /* Pods-Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3FAD53E548590A61893B80958F83E2A0 /* PBXTargetDependency */ = {
+		0A8B6011A4F176999B10A1F0351EAE81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XlsxReaderWriter;
+			target = AF717B65664D59F1F03B1F2B6929C233 /* XlsxReaderWriter */;
+			targetProxy = 161076F750F05BB6D7EA57E22C92A430 /* PBXContainerItemProxy */;
+		};
+		0BC6A6EF80A7E14E30D9037B3853303A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Aspects;
+			target = C6539905C4D50932B36244650B93C79B /* Aspects */;
+			targetProxy = 95428F41953881E1E5248C7B419EEC78 /* PBXContainerItemProxy */;
+		};
+		1747045FB70DD33D37498A8D782F5E2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XMLDictionary;
+			target = 9137C1635807AFB96F5BB125784CCF06 /* XMLDictionary */;
+			targetProxy = 3877ED80BC1A19BFCDE0E172BFA52EE8 /* PBXContainerItemProxy */;
+		};
+		3515DDBDB048AD3FEA696A78A8FA49B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSZipArchive;
+			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
+			targetProxy = 9A00561E20EB8CEF65176E9143937AAA /* PBXContainerItemProxy */;
+		};
+		86954BC7EAE71D1595584C18E7806D1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSZipArchive;
+			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
+			targetProxy = 6F6D9CC9CF6BFC045DE553872FDB5A96 /* PBXContainerItemProxy */;
+		};
+		99A5D18B35DA9B5A91E5E2CD2DBDE0C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CLAspects;
 			target = A59CD135374A833F453EE431100C569A /* CLAspects */;
-			targetProxy = FF675F6F295D5DB4F595189CFCCA76ED /* PBXContainerItemProxy */;
+			targetProxy = 65EF5BC07BC7528B40B098789F096F9B /* PBXContainerItemProxy */;
 		};
-		4BA4B927272BAF294536AB8BEF5A9ACB /* PBXTargetDependency */ = {
+		AD5839D18C5C90A168D76A2D7D07C77E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Aspects;
 			target = C6539905C4D50932B36244650B93C79B /* Aspects */;
-			targetProxy = BD5F6842E2CFF0CE6E7BBE431AC4E3BC /* PBXContainerItemProxy */;
+			targetProxy = E0A637C1188D5E16442911F0838EB090 /* PBXContainerItemProxy */;
 		};
-		53970593A43A7B84144D695E3CE7302C /* PBXTargetDependency */ = {
+		D3BF6832F68E69CF29167515AAF645A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Aspects;
-			target = C6539905C4D50932B36244650B93C79B /* Aspects */;
-			targetProxy = E27A34C632CB509C56B0EE4423ACE3DA /* PBXContainerItemProxy */;
+			name = XMLDictionary;
+			target = 9137C1635807AFB96F5BB125784CCF06 /* XMLDictionary */;
+			targetProxy = AB5BC76BFFC2DDFB5EC9C886EE829594 /* PBXContainerItemProxy */;
+		};
+		D95717D064917F8D73B35E96E26D16A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XlsxReaderWriter;
+			target = AF717B65664D59F1F03B1F2B6929C233 /* XlsxReaderWriter */;
+			targetProxy = CEBC7809B8ACD73C3DA06BC4AFFA8943 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2F04542B9DD8A33D5FAC688AF3DEC107 /* Release */ = {
+		114349CDEB4D1C0BF762D2C4A8C14CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5029F8F0CC77BAB00934A794DAFCAAB /* XMLDictionary.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/XMLDictionary/XMLDictionary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = XMLDictionary;
+				PRODUCT_NAME = XMLDictionary;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4FC1E86A74C2707196DAB92E67E33602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 889DA3D7364BC6FFF9ADF7D30A570D14 /* XMLDictionary.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/XMLDictionary/XMLDictionary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = XMLDictionary;
+				PRODUCT_NAME = XMLDictionary;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5908CDFF3F365C3974D3150598EF8CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 357D2DB6E0666AB0C7275BFF8A9C9B4B /* CLAspects.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CLAspects/CLAspects-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CLAspects;
+				PRODUCT_NAME = CLAspects;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62630D870B0B55580F95AD9BD982E948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A06B2CBC7F57E9BE08460BE730B397B /* Pods-Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6479051604E4C67AE763C74F315FF6B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47EAB53EECE78A7673C905A21AAD7B14 /* XlsxReaderWriter.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/XlsxReaderWriter/XlsxReaderWriter-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = XlsxReaderWriter;
+				PRODUCT_NAME = XlsxReaderWriter;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66C81502389FFD5744C8DA64598839AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 873CDB2CE2AB3D55E7F7846B54D0067E /* Pods-Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7459379DED02227ADA710345A7266F73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A87323D09777044A5BCB323712546A1D /* CLAspects.release.xcconfig */;
 			buildSettings = {
@@ -408,49 +1202,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		428BC8818B30C402A895B01FAAAA5CF4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 873CDB2CE2AB3D55E7F7846B54D0067E /* Pods-Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		8FE2A7F305911032C61B89A571881B0C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 357D2DB6E0666AB0C7275BFF8A9C9B4B /* CLAspects.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CLAspects/CLAspects-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CLAspects;
-				PRODUCT_NAME = CLAspects;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -516,7 +1267,7 @@
 		};
 		9B1D9EA489043109A88EC588A2F544EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5614FC705A17F97DE4B5E67782B3E449 /* Aspects.release.xcconfig */;
+			baseConfigurationReference = 1BA7F2D59B4817DBDCA632A7873D9C55 /* Aspects.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -536,6 +1287,29 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		A1BCC49B4DD39E4812D73BBB7DA8F28D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDDB1A0FA97DFCDAF79FFF713C14FD07 /* SSZipArchive.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SSZipArchive;
+				PRODUCT_NAME = SSZipArchive;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -605,7 +1379,7 @@
 		};
 		C08FB427C45099936D83E2B01EC98DB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 618D517A4DCA886A6D4D0BEAB51D0813 /* Aspects.debug.xcconfig */;
+			baseConfigurationReference = 430046DE0CE6650DE9BB5C5403031566 /* Aspects.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -625,23 +1399,47 @@
 			};
 			name = Debug;
 		};
-		F964665B7867AE207E9F807B65865C08 /* Release */ = {
+		CA84A6DD92413561A36E08BC01C7ECFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A06B2CBC7F57E9BE08460BE730B397B /* Pods-Example.release.xcconfig */;
+			baseConfigurationReference = 7581C0BB9459BB37646CCF1D4B74496B /* XlsxReaderWriter.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/XlsxReaderWriter/XlsxReaderWriter-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = XlsxReaderWriter;
+				PRODUCT_NAME = XlsxReaderWriter;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D675DC26DE323E53BC485A21D37ADF22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFF139AB78BDFE860163F52CF6A3FF42 /* SSZipArchive.release.xcconfig */;
+			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SSZipArchive;
+				PRODUCT_NAME = SSZipArchive;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -650,11 +1448,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		34DBCB8F0766F10ADCDD24B0CC871055 /* Build configuration list for PBXNativeTarget "CLAspects" */ = {
+		04E02ECB88A17C7200DCDAA55F3E4363 /* Build configuration list for PBXNativeTarget "XMLDictionary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8FE2A7F305911032C61B89A571881B0C /* Debug */,
-				2F04542B9DD8A33D5FAC688AF3DEC107 /* Release */,
+				114349CDEB4D1C0BF762D2C4A8C14CAB /* Debug */,
+				4FC1E86A74C2707196DAB92E67E33602 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C4F6A27F89957AA361471425929C6E9 /* Build configuration list for PBXNativeTarget "CLAspects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5908CDFF3F365C3974D3150598EF8CD9 /* Debug */,
+				7459379DED02227ADA710345A7266F73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -668,6 +1475,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4E4F1EBC311F2EB7335478B2E6110006 /* Build configuration list for PBXNativeTarget "SSZipArchive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1BCC49B4DD39E4812D73BBB7DA8F28D /* Debug */,
+				D675DC26DE323E53BC485A21D37ADF22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5962DEA5543004FB232F3A8A7D41B120 /* Build configuration list for PBXNativeTarget "XlsxReaderWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA84A6DD92413561A36E08BC01C7ECFA /* Debug */,
+				6479051604E4C67AE763C74F315FF6B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		85BEA5F3C86A567FA464829337DCDE9F /* Build configuration list for PBXNativeTarget "Aspects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -677,11 +1502,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87C1E9A37BA81FB393C3AF43D810A6FD /* Build configuration list for PBXNativeTarget "Pods-Example" */ = {
+		AF59060AF2D7A52353BDFDE48AFC4A18 /* Build configuration list for PBXNativeTarget "Pods-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				428BC8818B30C402A895B01FAAAA5CF4 /* Debug */,
-				F964665B7867AE207E9F807B65865C08 /* Release */,
+				66C81502389FFD5744C8DA64598839AA /* Debug */,
+				62630D870B0B55580F95AD9BD982E948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

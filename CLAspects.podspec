@@ -28,5 +28,6 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
   s.static_framework = true
   s.source_files = 'CLAspects/Classes/**/*'
-  s.dependency 'Aspects'
+  s.dependency 'Aspects','1.4.1'
+  s.dependency 'XlsxReaderWriter', '1.0.11'
 end

@@ -7,6 +7,7 @@
 #import "AppDelegate.h"
 #import "CLAspects.h"
 #import "ViewController.h"
+#import "BRAOfficeDocumentPackage.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,8 @@
     [self.window makeKeyAndVisible];
     
     [self md];
+    
+//    [self readXLS];
     return YES;
 }
 
@@ -33,6 +36,21 @@
     } configBlock:^(NSString *html) {
         NSLog(@"html = %@",html);
     }];
+}
+
+-(void)readXLS{
+    NSString *documentPath = [[NSBundle mainBundle] pathForResource:@"MD" ofType:@"xlsx"];
+    BRAOfficeDocumentPackage *spreadsheet = [BRAOfficeDocumentPackage open:documentPath];
+    BRAWorksheet *worksheet = spreadsheet.workbook.worksheets.firstObject;
+    NSArray<BRARow *> *rows = worksheet.rows;
+    
+    for (int i=0; i<rows.count; i++) {
+        BRARow *row = rows[i];
+        NSLog(@"------------------------- %d -----------------------------",i);
+        for (BRACell *cell in row.cells) {
+            NSLog(@"cell.stringValue = %@",cell.stringValue);
+        }
+    }
 }
 
 @end

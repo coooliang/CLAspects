@@ -22,7 +22,10 @@
   "source_files": "CLAspects/Classes/**/*",
   "dependencies": {
     "Aspects": [
-
+      "1.4.1"
+    ],
+    "XlsxReaderWriter": [
+      "1.0.11"
     ]
   }
 }
